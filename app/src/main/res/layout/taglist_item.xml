@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/name_tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tag_selector"
+    android:ellipsize="end"
+    android:foreground="?attr/selectableItemBackground"
+    android:gravity="center"
+    android:lines="1"
+    android:layout_margin="@dimen/sx_dp10"
+    android:paddingBottom="@dimen/sx_dp10"
+    android:paddingTop="@dimen/sx_dp10"
+    android:paddingLeft="@dimen/sx_dp16"
+    android:paddingRight="@dimen/sx_dp16"
+    android:textColor="@color/tag_select"
+    android:textSize="@dimen/sx_sp14"
+    tools:text="创业教育" />
+
+
+

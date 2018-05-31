@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/sx_dp100"
+        android:layout_marginTop="@dimen/sx_dp100"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.better.appbase.view.BetterLoadingView
+            android:id="@+id/empty_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sx_dp10"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/empty_loading_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sx_dp25"
+            android:gravity="center_horizontal"
+            android:text="加载失败 请检查网络"
+            android:textColor="#b2b2b2"
+            android:textSize="@dimen/sx_sp13"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/sx_dp50"
+        android:layout_marginTop="@dimen/sx_dp50"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/empty_type_image"
+            android:layout_width="@dimen/sx_dp60"
+            android:layout_height="@dimen/sx_dp65"
+            android:layout_marginBottom="@dimen/sx_dp25"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/base_recyclerview_empty"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/empty_type_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sx_dp25"
+            android:gravity="center_horizontal"
+            android:text="加载失败 请检查网络"
+            android:textColor="#b2b2b2"
+            android:textSize="@dimen/sx_sp13"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/empty_type_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/main_button"
+            android:paddingBottom="@dimen/sx_dp8"
+            android:paddingLeft="@dimen/sx_dp15"
+            android:paddingRight="@dimen/sx_dp15"
+            android:paddingTop="@dimen/sx_dp8"
+            android:text="暂无数据"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sx_sp13" />
+
+    </LinearLayout>
+
+</FrameLayout>

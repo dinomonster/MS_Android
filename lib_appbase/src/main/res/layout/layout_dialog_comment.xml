@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sx_dp15"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sx_dp9"
+            android:padding="@dimen/sx_dp6"
+            android:text="取消"
+            android:textColor="@color/color_666666"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_publish_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sx_dp18"
+            android:layout_marginRight="@dimen/sx_dp9"
+            android:padding="@dimen/sx_dp6"
+            android:text="发布"
+            android:textColor="@color/color_d7d7d7"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_write_comment"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="@dimen/sx_dp15"
+        android:layout_marginRight="@dimen/sx_dp15"
+        android:layout_marginTop="@dimen/sx_dp9"
+        android:background="@null"
+        android:gravity="left"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="写评论(最大字符不超过500字)"
+        android:textColorHint="@color/color_d7d7d7"
+        android:textSize="12sp" />
+</LinearLayout>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sx_login_out_info1">安全登錄提示</string>
+    <string name="sx_login_out_info2">重新登錄</string>
+    <string name="sx_login_out_info3">修改密碼</string>
+
+    <string name="sx_item_be_grind_info1">學霸席</string>
+    <string name="sx_item_be_grind_info2">學霸尊享更多權益</string>
+    <string name="sx_item_be_grind_info3">成為學霸</string>
+
+    <string name="sx_learn_books_tab1">本周成績單</string>
+    <string name="sx_learn_books_tab2">學習清單</string>
+    <string name="sx_week_report_learning_time">本週學習時長</string>
+    <string name="sx_week_report_learning_experience">本週學習心得</string>
+
+    <string name="sx_study_list_history_record">觀看歷史</string>
+    <string name="sx_study_list_live_list">已預約直播</string>
+    <string name="sx_study_list_offline_registration">已報名活動</string>
+    <string name="sx_study_list_experience_notes">心得筆記</string>
+    <string name="sx_study_list_honor_certificate">修業證書</string>
+
+    <string name="app_name">師兄在線</string><![CDATA[
+    
+    ]]><string name="no_zhiwei_watch">人才庫有大量優秀人才哦 \n快去發布職位啊</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    ]]>
+    <string name="share_to_wx">分享到</string>
+    <string name="share_to_wx_timeline">朋友圈</string>
+    <string name="share_to_wx_friend">微信好友</string>
+    <string name="share_to_wx_contacts">手機通訊錄</string>
+    <string name="app_cancel">取消</string>
+    <string name="search_default">搜索</string>
+    <string name="confirm">確定</string>
+    <string name="cancel">取消</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ]]>
+    <string name="pay_course">購買本次課程</string>
+    <string name="pay_course_wx">微信支付</string>
+    <string name="study_rank">代言榜</string><![CDATA[
+    
+    
+    
+    
+    
+
+
+
+
+    
+    ]]><string name="course_search">搜索你感興趣的課程</string><![CDATA[
+    
+    
+    
+    
+    
+    ]]><string name="lesson_buy_know">我知道了</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+    ]]>
+    <string name="course_edit">編輯</string>
+    <string name="course_delete">刪除</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ]]>
+    <string name="homepage">發現</string>
+    <string name="my_about">我的</string>
+    <string name="my_join">學習賬本</string>
+    <string name="my_classroom">私塾</string><![CDATA[
+    
+    ]]>
+    <string name="my_bill">錢包</string>
+    <string name="my_college">學院</string><![CDATA[
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    
+    
+    
+    ]]>
+    <string name="my_inviting_friends">邀請好友</string>
+    <string name="my_represent_code">代言號：</string>
+    <string name="my_wallet">我的錢包</string>
+    <string name="my_resume">我的簡歷</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    ]]><string name="my_wallet_reflect">提現</string><![CDATA[
+    
+    
+    
+    ]]>
+    <string name="login_out">退出登錄</string>
+    <string name="sx_user">用戶</string>
+    <string name="sx_people">人</string>
+    <string name="sx_grind">學霸</string>
+    <string name="sx_spokesman">代言</string>
+    <string name="sx_tutor">導師</string>
+    <string name="sx_student">學生</string>
+
+    <string name="help_tips">任何業務諮詢、投訴建議等，歡迎通過以下方式和我們聯繫，工作日（週一至週五）9:00-18:00</string>
+    <string name="help_wx_service">微信公眾服務號</string>
+    <string name="wx_service_name">師兄在線</string>
+    <string name="help_qq_service">企業QQ服務號</string>
+    <string name="qq_service_no">3347902308</string>
+    <string name="help_phone_no">客服熱線</string>
+    <string name="phone_no">400-880-1033</string>
+    <string name="about_manager_knowledge">全球工商管理知識共享平台</string><![CDATA[
+    
+    
+    
+    
+    ]]>
+    <string name="remaining_money">零錢餘額</string>
+    <string name="reflect_all_money">全部提現</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    ]]>
+    <string name="change_password">修改密碼</string>
+    <string name="save_photo">保存圖片到相冊</string>
+    <string name="title_publish">發布活動</string><![CDATA[
+    
+    
+    
+
+
+
+    
+    ]]><string name="share_no_map">您尚未安裝高德或者百度地圖，無法跳轉導航</string><![CDATA[
+    
+    ]]><string name="sex">性別</string><![CDATA[
+    
+    
+    
+
+    
+    ]]>
+    <string name="name">姓名</string>
+    <string name="addr_detail">詳細地址</string>
+    <string name="fill_detail_addr">詳細地址、具體門牌號</string><![CDATA[
+    
+    
+    
+    
+    
+    ]]>
+    <string name="hot_city">熱門城市</string>
+    <string name="located_city">定位城市</string>
+
+
+    <string name="hint_search_box">請輸入城市名或拼音</string>
+    <string name="nothing_found">​​沒有搜索結果~</string>
+    <string name="locating">正在定位…</string>
+    <string name="located_failed">定位失敗</string><![CDATA[
+    
+    
+    
+    ]]><string name="no_net">網絡環境較差\n點擊重新加載</string><![CDATA[
+    
+    
+    
+    
+
+
+    ]]>
+    <string name="actiity_publish_success">活動發布成功，等待審核</string>
+    <string name="actiity_publish_fail">網絡異常，請在網絡正常後重新發布</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ]]><string name="hint_activity_details">請輸入活動具體詳情</string><![CDATA[
+    
+
+
+
+    ]]>
+    <string name="sx_see_more">查看更多</string>
+    <string name="sx_more">更多</string>
+    <string name="sx_already_in_the_end">已經到底啦</string>
+    <string name="sx_setting">設置</string>
+    <string name="sx_help_and_feedback">幫助與反饋</string>
+    <string name="sx_about_brothers_online">關於師兄在線</string>
+    <string name="sx_rate_us">給我們評分</string>
+    <string name="sx_account_and_security">賬號與安全</string>
+    <string name="sx_bind_micro_signal">綁定微信號</string>
+
+    <string name="sx_invitation_record">邀請記錄</string>
+    <string name="sx_long_press_pictures_to_save_to_album">長按圖片保存到相冊</string>
+    <string name="sx_one_click_invitation">一鍵邀請</string>
+    <string name="sx_current_balance">當前餘額</string>
+    <string name="sx_bills">賬單</string>
+    <string name="sx_cumulative_income">累計收入</string>
+    <string name="sx_cumulative_withdrawal">累計提現</string>
+    <string name="sx_present_pending">提現待審</string>
+    <string name="sx_integral">積分</string>
+    <string name="sx_my_certificate">我的證書</string>
+    <string name="sx_star_rating_details">評星明細</string>
+    <string name="sx_download_the_certificate">下載證書</string>
+    <string name="sx_my_bill">我的賬單</string>
+
+
+    <string name="sx_my_cash">我的提現</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/sx_dp3"
+    android:gravity="center"
+    android:paddingBottom="@dimen/sx_dp12"
+    android:paddingLeft="@dimen/sx_dp5"
+    android:paddingRight="@dimen/sx_dp5"
+    android:paddingTop="@dimen/sx_dp12"
+    android:textColor="@color/content_text"
+    android:textSize="@dimen/sx_sp12" />

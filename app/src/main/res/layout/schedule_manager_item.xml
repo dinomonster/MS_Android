@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sx_dp8"
+            android:layout_marginLeft="@dimen/sx_dp8"
+            android:layout_marginTop="@dimen/sx_dp8"
+            app:cardCornerRadius="@dimen/sx_dp5"
+            app:cardElevation="@dimen/sx_dp2"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+
+            <ImageView
+                android:id="@+id/covver_image"
+                android:layout_width="@dimen/sx_dp130"
+                android:layout_height="@dimen/sx_dp90"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_back" />
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/sx_dp8"
+            android:layout_marginLeft="@dimen/sx_dp2"
+            android:layout_marginTop="@dimen/sx_dp8"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/sx_dp10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/themename_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="公司公司公司公司公司公司公司公司公司"
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/sx_sp18" />
+
+                <TextView
+                    android:id="@+id/teacher_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="公司公司公司公司公司公司公司公司公司"
+                    android:textColor="@color/content_text"
+                    android:textSize="@dimen/sx_sp15" />
+
+                <TextView
+                    android:id="@+id/address_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="公司公司公司公司公司公司公司公司公司"
+                    android:textColor="@color/content_text"
+                    android:textSize="@dimen/sx_sp15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:layout_marginRight="@dimen/sx_dp3"
+                        android:lines="1"
+                        android:text="381次观看"
+                        android:textColor="@color/focus_red_text"
+                        android:textSize="@dimen/sx_sp15" />
+
+
+                    <TextView
+                        android:id="@+id/date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="1970-01-01"
+                        android:textColor="@color/content_text"
+                        android:textSize="@dimen/sx_sp15" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/sx_dp8"
+            app:srcCompat="@drawable/ic_more" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/sx_dp15"
+        android:layout_marginRight="@dimen/sx_dp15"
+        android:background="@color/line" />
+
+</LinearLayout>

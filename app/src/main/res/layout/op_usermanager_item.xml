@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/sx_dp10">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/sx_dp75"
+            android:layout_height="@dimen/sx_dp75"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="@dimen/sx_dp10"
+            android:src="@drawable/default_head" />
+
+
+        <LinearLayout
+            android:id="@+id/content_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp5"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/sx_sp18"
+                tools:text="赵子杰" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/content_text"
+                    android:textSize="@dimen/sx_sp15"
+                    tools:text="普通用户" />
+
+                <LinearLayout
+                    android:id="@+id/role_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:padding="@dimen/sx_dp5"
+                    android:background="@drawable/shape_white_rect_border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:textColor="@color/content_text"
+                        android:textSize="@dimen/sx_sp15"
+                        android:text="角色信息" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sx_dp5"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp5"
+                    android:layout_weight="0.5"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/focus_red_text"
+                    android:textSize="@dimen/sx_sp15"
+                    tools:text="¥0" />
+
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/content_text"
+                    android:textSize="@dimen/sx_sp15"
+                    tools:text="2018/04/03 15:14" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/sx_dp8"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_more" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/sx_dp15"
+        android:layout_marginRight="@dimen/sx_dp15"
+        android:background="@color/line" />
+</LinearLayout>

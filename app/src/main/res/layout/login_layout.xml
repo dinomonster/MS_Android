@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:drawableTop="@mipmap/login_logo"
+        android:gravity="center"
+        android:textColor="@color/content_text"
+        android:text="后台管理系统" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sx_dp45"
+        android:layout_marginLeft="@dimen/sx_dp35"
+        android:layout_marginRight="@dimen/sx_dp35"
+        android:layout_marginTop="@dimen/sx_dp20">
+
+
+        <com.hr.ms.ms_android.widget.XEditText
+            android:id="@+id/account_et"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:hint="输入账号"
+            android:inputType="text"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_999999"
+            app:x_separator=""
+            android:textSize="@dimen/sx_sp15" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line" />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sx_dp45"
+        android:layout_marginLeft="@dimen/sx_dp35"
+        android:layout_marginRight="@dimen/sx_dp35"
+        android:layout_marginTop="@dimen/sx_dp10">
+
+
+        <EditText
+            android:id="@+id/pwd_et"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:hint="输入登录密码"
+            android:inputType="textPassword"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/sx_sp15" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line" />
+
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/sx_dp20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/sx_dp300"
+            android:layout_height="@dimen/sx_dp45"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_login_selector"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/login_text_selector" />
+
+    </LinearLayout>
+
+
+
+
+</android.support.v7.widget.FitWindowsLinearLayout>

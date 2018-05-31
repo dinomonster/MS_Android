@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!-- MAIN COLOR -->
+    <color name="main_color">@color/color_a78760</color><!-- 主色调，按钮或链接、标签栏当前状态图标及文本、tab当前状态、弹出层按钮文本、完成操作提示 -->
+    <color name="main_color_press">@color/color_ede7df</color><!-- main_color press状态 -->
+    <color name="main_color_disable">@color/color_f6f3ef</color><!-- main_color disable状态 -->
+
+    <color name="logo">@color/color_111111</color><!-- logo、课程海报标题 -->
+    <color name="logo_press">@color/color_cfcfcf</color><!-- logo press状态 -->
+    <color name="logo_disable">@color/color_e8e8e8</color><!-- logo disable状态 -->
+
+    <color name="main_light">@android:color/white</color><!-- 深背景色、有色按钮上文本 -->
+    <color name="main_light_press">@color/color_f5f5f5</color><!-- main_light press状态 -->
+    <color name="main_light_disable">@color/color_ebebeb</color><!-- main_light disable状态 -->
+
+    <!-- TEXT COLOR -->
+    <color name="title_text">@color/color_353535</color><!-- 导航栏、标签栏、正文内容标题、强调性文本、用户名 -->
+    <color name="title_text_press">@color/color_d7d7d7</color><!-- title_text press状态 -->
+    <color name="title_text_disable">@color/color_ebebeb</color><!-- title_text disable状态 -->
+
+    <color name="content_text">@color/color_888888</color><!-- 正文、正文列表小标题 -->
+    <color name="content_text_press">@color/color_e7e7e7</color><!-- content_text press状态 -->
+    <color name="content_text_disable">@color/color_f3f3f3</color><!-- content_text disable状态 -->
+
+    <color name="tip_text">@color/color_b2b2b2</color><!-- 温馨提示文、按钮不点击时文本、正文介绍内容 -->
+    <color name="tip_text_press">@color/color_f0f0f0</color><!-- tip_text press状态 -->
+    <color name="tip_text_disable">@color/color_f7f7f7</color><!-- tip_text disable状态 -->
+
+    <color name="focus_red_text">@color/color_e64340</color><!-- 价格数字、注释说明、重要提示 -->
+    <color name="focus_red_text_press">@color/color_fad9d9</color><!-- focus_red_text press状态 -->
+    <color name="focus_red_text_disable">@color/color_fdedec</color><!-- focus_red_text disable状态 -->
+
+    <!-- ASSIST COLOR -->
+    <color name="bg">@color/color_f6f6f6</color><!-- 背景色 -->
+    <color name="line">@color/color_DCDCDC</color><!-- 边框色、分割线 -->
+
+    <color name="success_status">@color/color_09bb07</color><!-- 提交、确认等按钮色，完成、审核成功等状态色 -->
+    <color name="success_status_press">@color/color_cef1cd</color><!-- success_status press状态 -->
+    <color name="success_status_disable">@color/color_e7f8e7</color><!-- success_status disable状态 -->
+
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/sx_dp10"
+        android:paddingLeft="@dimen/sx_dp10"
+        android:paddingRight="@dimen/sx_dp10"
+        android:paddingTop="@dimen/sx_dp15">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/sx_dp55"
+            android:layout_height="@dimen/sx_dp55"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_head" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/sx_dp15"
+            android:layout_marginTop="@dimen/sx_dp5"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/color_353535"
+                android:textSize="@dimen/sx_sp15"
+                android:textStyle="bold"
+                tools:text="邓地" />
+
+
+            <TextView
+                android:id="@+id/introduction_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="aaaaaaaaaaaaaaaaaaaaaaassssssssssssss"
+                android:lines="2"
+                android:textColor="@color/content_text"
+                android:textSize="@dimen/sx_sp11" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/sx_dp15"
+        android:layout_marginRight="@dimen/sx_dp15"
+        android:background="@color/line" />
+</LinearLayout>
+

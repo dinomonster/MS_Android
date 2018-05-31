@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+
+    <include layout="@layout/toolbar_layout"/>
+    <include layout="@layout/search_bar2"
+        android:visibility="gone"/>
+
+
+    <View style="@style/line_style" />
+
+    <com.yyydjk.library.DropDownMenu
+        android:id="@+id/dropDownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:dddividerColor="@color/line"
+        app:dddividerHeight="@dimen/sx_dp10"
+        app:ddmenuBackgroundColor="@android:color/white"
+        app:ddmenuSelectedIcon="@mipmap/icon_down_press"
+        app:ddmenuTextSize="@dimen/sx_sp12"
+        app:ddmenuUnselectedIcon="@mipmap/icon_down"
+        app:ddtextSelectedColor="@color/main_color"
+        app:ddtextUnselectedColor="@color/content_text"
+        app:ddunderlineColor="@color/transparent_color" />
+
+</android.support.v7.widget.FitWindowsLinearLayout>

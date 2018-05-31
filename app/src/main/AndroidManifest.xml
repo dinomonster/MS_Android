@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hr.ms.ms_android">
+
+    <!-- SD卡写权限 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--用于访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- 后台下载 -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <application
+        android:name="AppConfig"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".mvp.login.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.main.MainActivity"
+            android:label="主页"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".mvp.permission.usermanager.UserManagerActivity"
+            android:label="权限管理->用户管理"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".mvp.permission.usermanager.detail.UserDetailActivity"
+            android:label="用户管理->用户详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.permission.usermanager.roleselect.RoleSelectActivity"
+            android:label="用户详情->角色选择"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.permission.usermanager.rolecheck.RoleCheckActivity"
+            android:label="用户详情->角色对应资源查看"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.permission.resourcemanager.ResourceManagerActivity"
+            android:label="权限管理->菜单管理"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.permission.resourcemanager.detail.ResourceDetailActivity"
+            android:label="菜单管理->菜单详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.resources.overview.OverviewActivity"
+            android:label="资源管理->概览"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.resources.teachersmanager.TeachersManagerActivity"
+            android:label="资源管理->师资管理"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.resources.teachersmanager.detail.TeachersDetailActivity"
+            android:label="师资管理->师资详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.resources.schedulemanager.ScheduleManagerActivity"
+            android:label="资源管理->排课管理"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.resources.schedulemanager.detail.ScheduleDetailActivity"
+            android:label="排课管理->排课详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.resources.schedulemanager.detail.guest.GuestActivity"
+            android:label="排课详情->嘉宾列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.resources.schedulemanager.detail.guest.detail.GuestDetailActivity"
+            android:label="嘉宾列表->嘉宾详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.userchoose.UserChooseActivity"
+            android:label="嘉宾详情->老师选择"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.withdrawmanager.WithdrawManagerActivity"
+            android:label="运营管理->提现管理"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.withdrawmanager.detail.WithdrawCheckActivity"
+            android:label="提现管理->提现审核"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.withdrawmanager.detail.WithdrawDetailActivity"
+            android:label="提现管理->提现详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.usermanager.userlist.UserManagerActivity"
+            android:label="运营管理->用户管理->用户列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.usermanager.edit.UserEditActivity"
+            android:label="用户列表->用户编辑"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.usermanager.identitymanager.IdentityManagerActivity"
+            android:label="运营管理->用户管理->身份管理"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.stagechoose.StageChooseActivity"
+            android:label="身份管理->驿站列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.usermanager.identitymanager.setagent.SetAgentActivity"
+            android:label="身份管理->代言人设置"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.usermanager.identitymanager.setscholar.SetScholarActivity"
+            android:label="身份管理->学霸设置"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.subjectmanager.SubjectManagerActivity"
+            android:label="运营管理->课题列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.subjectmanager.detail.SubjectDetailActivity"
+            android:label="课题列表->课题详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.subjectmanager.detail.courseedit.CourseEditActivity"
+            android:label="课题详情->课程编辑"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.subjectmanager.detail.courseedit.CourseAddActivity"
+            android:label="课题详情->新增课程"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.subjectmanager.detail.edit.SubjectEditActivity"
+            android:label="课题详情->编辑课题详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.subjectmanager.detail.edit.SubjectAddActivity"
+            android:label="课题管理->新增课题"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.interviewmanager.InterviewManagerActivity"
+            android:label="运营管理->访谈列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.interviewmanager.edit.InterviewEditActivity"
+            android:label="访谈列表->访谈详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.reportmanager.ReportManagerActivity"
+            android:label="运营管理->播报列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.reportmanager.detail.ReportDetailActivity"
+            android:label="播报列表->播报详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.collegeroommanager.CollegeRoomManagerActivity"
+            android:label="运营管理->私塾列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.collegeroommanager.add.CollegeRoomAddActivity"
+            android:label="私塾列表->私塾新增"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.collegeroommanager.detail.CollegeRoomDetailActivity"
+            android:label="私塾列表->私塾详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.activitymanager.ActivityManagerActivity"
+            android:label="运营管理->活动列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.activitymanager.detail.ActivityDetailActivity"
+            android:label="活动列表->活动详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.activitymanager.detail.guestdetail.ActivityGuestDetailActivity"
+            android:label="活动详情->嘉宾详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.livemanager.LiveManagerActivity"
+            android:label="运营管理->直播列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.operation.livemanager.detail.LiveDetailActivity"
+            android:label="直播列表->直播详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.livemanager.detail.guestdetail.LiveGuestDetailActivity"
+            android:label="直播详情->嘉宾详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".mvp.tagmanager.TagManagerActivity"
+            android:label="标签列表"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".mvp.collegeroomchoose.CollegeRoomListActivity"
+            android:label="私塾选择列表"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.search.SearchActivity"
+            android:label="搜索页面"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.stagemanager.StageManagerActivity"
+            android:label="运营管理-驿站管理"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.stagemanager.detail.StageDetailActivity"
+            android:label="驿站管理-驿站详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.stagemanager.chooseusernext.StageChooseUserActivity"
+            android:label="驿站管理-创建驿站第一步"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.stagemanager.add.StageAddActivity"
+            android:label="驿站管理-创建驿站第二步"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.stagemanager.detail.member.MemberActivity"
+            android:label="驿站管理-驿站详情-成员详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.stagemanager.detail.stageedit.StageEditActivity"
+            android:label="驿站管理-驿站详情-资料详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.stagemanager.detail.agentinfo.AgentInfoActivity"
+            android:label="驿站管理-驿站详情-代言卡详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.usermanager.seniormanager.SeniorManagerActivity"
+            android:label="师兄管理"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.usermanager.seniormanager.chooseusernext.SeniorChooseUserActivity"
+            android:label="师兄管理-选择用户"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.usermanager.seniormanager.add.SeniorAddActivity"
+            android:label="师兄管理-完善资料"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".mvp.operation.collegeroommanager.chooseusernext.CollegeRoomChooseUserActivity"
+            android:label="私塾管理-选择导师"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+    </application>
+
+</manifest>

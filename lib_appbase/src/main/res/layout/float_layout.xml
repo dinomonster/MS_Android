@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="@dimen/sx_dp66"
+        android:layout_height="@dimen/sx_dp66"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="@dimen/sx_dp66">
+
+        <ImageView
+            android:layout_width="@dimen/sx_dp63"
+            android:layout_height="@dimen/sx_dp63"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_float_image_shadow" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/image_cover"
+            android:layout_width="@dimen/sx_dp55"
+            android:layout_height="@dimen/sx_dp55"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/sx_dp1"
+            android:src="@drawable/default_head" />
+    </FrameLayout>
+
+
+</FrameLayout>

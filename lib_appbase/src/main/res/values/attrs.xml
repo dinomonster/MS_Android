@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MClearEditText">
+        <!--是否展示底部线 : 默认显示 -->
+        <attr name="mClearEditText_showBottomLine" format="boolean"/>
+        <!--底部线的颜色-->
+        <attr name="mClearEditText_bottomLineColor" format="color"/>
+        <!--底部线的宽度-->
+        <attr name="mClearEditText_bottomLineWidth" format="dimension"/>
+        <!-- 左边图片的大小 -->
+        <attr name="mClearEditText_leftDrawableSize" format="dimension"/>
+        <!-- 是否显示右边删除按钮 :默认显示-->
+        <attr name="mClearEditText_disableClear" format="boolean"/>
+        <!-- 右边图片的大小 -->
+        <attr name="mClearEditText_rightDrawableSize" format="dimension"/>
+    </declare-styleable>
+
+    <!--共用toolbar-->
+    <declare-styleable name="CommonToolBar">
+        <attr name = "back_content" format = "string" />
+        <attr name = "btn_back_color" format = "color" />
+        <attr name = "title_size" format = "dimension" />
+        <attr name = "back_text_color" format = "color" />
+        <attr name = "title_content" format = "string" />
+        <attr name = "title_color" format = "color" />
+        <attr name = "more_size" format = "dimension" />
+        <attr name = "more_content" format = "string" />
+        <attr name = "more_color" format = "color" />
+        <attr name = "more_image" format = "reference" />
+        <attr name = "show_bottom_line" format = "boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean"/>
+        <attr name="ios" format="boolean"/>
+        <attr name="leftSwipe" format="boolean"/>
+    </declare-styleable>
+
+    <!--SuperTextView-->
+    <declare-styleable name="SuperTextView">
+        <attr name="corner" format="dimension"/>
+        <attr name="left_top_corner" format="boolean"/>
+        <attr name="right_top_corner" format="boolean"/>
+        <attr name="left_bottom_corner" format="boolean"/>
+        <attr name="right_bottom_corner" format="boolean"/>
+        <attr name="solid" format="reference|color"/>
+        <attr name="stroke_width" format="dimension"/>
+        <attr name="stroke_color" format="reference|color"/>
+        <attr name="state_drawable" format="reference"/>
+        <attr name="state_drawable_width" format="dimension"/>
+        <attr name="state_drawable_height" format="dimension"/>
+        <attr name="state_drawable_padding_left" format="dimension"/>
+        <attr name="state_drawable_padding_top" format="dimension"/>
+        <attr name="isShowState" format="boolean"/>
+        <attr name="text_stroke" format="boolean"/>
+        <attr name="text_stroke_color" format="reference|color"/>
+        <attr name="text_stroke_width" format="dimension"/>
+        <attr name="text_fill_color" format="reference|color"/>
+        <attr name="autoAdjust" format="boolean"/>
+        <attr name="state_drawable_mode" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="bottom" value="3"/>
+            <enum name="center" value="4"/>
+            <enum name="fill" value="5"/>
+            <enum name="leftTop" value="6"/>
+            <enum name="rightTop" value="7"/>
+            <enum name="leftBottom" value="8"/>
+            <enum name="rightBottom" value="9"/>
+        </attr>
+        <attr name="shaderStartColor" format="reference|color"/>
+        <attr name="shaderEndColor" format="reference|color"/>
+        <attr name="shaderMode" format="enum">
+            <enum name="topToBottom" value="0"/>
+            <enum name="bottomToTop" value="1"/>
+            <enum name="leftTopRight" value="2"/>
+            <enum name="rightToLeft" value="3"/>
+        </attr>
+        <attr name="shaderEnable" format="boolean"/>
+        <attr name="pressBgColor" format="reference|color"/>
+        <attr name="pressTextColor" format="reference|color"/>
+    </declare-styleable>
+
+    <declare-styleable name="WaveSideBarView">
+        <attr name="sidebarTextColor" format="color|reference"/>
+        <attr name="sidebarBackgroundColor" format="color|reference"/>
+        <attr name="sidebarChooseTextColor" format="color|reference"/>
+        <attr name="sidebarTextSize" format="dimension"/>
+        <attr name="sidebarLargeTextSize" format="dimension"/>
+        <attr name="sidebarRadius" format="dimension"/>
+        <attr name="sidebarBallRadius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="BetterUpGradeProgressBar">
+        <attr name="textSize" format="dimension" />
+        <attr name="radius" format="dimension" />
+        <attr name="borderWidth" format="dimension" />
+
+        <attr name="color_stop" format="color" />
+        <attr name="color_normal" format="color" />
+        <attr name="color_loading" format="color" />
+        <attr name="color_finish" format="color" />
+
+        <attr name="title_stop" format="string" />
+        <attr name="title_normal" format="string" />
+        <attr name="title_loading" format="string" />
+        <attr name="title_finish" format="string" />
+    </declare-styleable>
+
+</resources>

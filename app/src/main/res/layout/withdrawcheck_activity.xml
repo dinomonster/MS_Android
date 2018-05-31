@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <View style="@style/line_style" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/sx_dp10"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sx_dp1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/sx_dp12"
+                android:paddingLeft="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp13"
+                android:text="申请明细"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/sx_sp16" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:text="申&#8197;请&#8197;金&#8197;额&#8197;" />
+
+                    <TextView
+                        android:id="@+id/applyamount_tv"
+                        style="@style/form_text_content_right_style"
+                        tools:text="11111111111" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:text="用&#8197;户&#8197;姓&#8197;名&#8197;" />
+
+                    <TextView
+                        android:id="@+id/name_tv"
+                        style="@style/form_text_content_right_style"
+                        tools:text="ssssss" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:text="应到账金额" />
+
+                    <TextView
+                        android:id="@+id/payableamount_tv"
+                        style="@style/form_text_content_right_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:text="手&#12288;续&#12288;费" />
+
+                    <TextView
+                        android:id="@+id/poundageAmount_tv"
+                        style="@style/form_text_content_right_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:text="提&#12288;现&#12288;至 " />
+
+                    <TextView
+                        android:id="@+id/mode_tv"
+                        style="@style/form_text_content_right_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:text="申&#8197;请&#8197;时&#8197;间&#8197;" />
+
+                    <TextView
+                        android:id="@+id/applytime_tv"
+                        style="@style/form_text_content_right_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:text="订&#12288;单&#12288;号" />
+
+                    <TextView
+                        android:id="@+id/orderNo_tv"
+                        style="@style/form_text_content_right_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:text="当&#8197;前&#8197;状&#8197;态&#8197;" />
+
+                    <TextView
+                        android:id="@+id/checkStatus_tv"
+                        android:textColor="@color/focus_red_text"
+                        style="@style/form_text_content_right_style" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sx_dp10"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:paddingBottom="@dimen/sx_dp12"
+                    android:paddingLeft="@dimen/sx_dp10"
+                    android:paddingTop="@dimen/sx_dp13"
+                    android:text="审核信息"
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/sx_sp16" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:text="审&#8197;核&#8197;金&#8197;额&#8197;" />
+
+                    <EditText
+                        android:id="@+id/checkAmount_tv"
+                        android:layout_width="match_parent"
+                        android:hint="填写审核金额"
+                        style="@style/form_text_content_left_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:text="审&#12288;核&#12288;人" />
+
+                    <EditText
+                        android:id="@+id/checkUser_tv"
+                        android:layout_width="match_parent"
+                        android:hint="填写审核人命名"
+                        style="@style/form_text_content_left_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:gravity="top"
+                        android:text="拒&#8197;绝&#8197;原&#8197;因&#8197;" />
+
+                    <EditText
+                        android:id="@+id/refuseReason_tv"
+                        style="@style/form_text_content_left_style"
+                        android:gravity="top"
+                        android:layout_height="@dimen/sx_dp75"
+                        android:layout_width="match_parent"
+                        android:lines="5"
+                        android:hint="如拒绝申请请填写拒绝原因，同意申请则不填"
+                        tools:text="111sssssssssssssssssssssssssssssssssssssss11" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/action_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sx_dp50"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/refuse_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_red_selector"
+            android:gravity="center"
+            android:text="拒绝"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/agree_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_green_selector"
+            android:gravity="center"
+            android:text="同意"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+</android.support.v7.widget.FitWindowsLinearLayout>

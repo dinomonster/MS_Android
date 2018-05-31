@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--默认Theme-->
+    <style name="AppTheme" parent="BaseAppTheme"/>
+
+    <style name="FullTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--默认Theme-->
+    <style name="NoSwipeBackTheme" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="colorAccent">@color/main_color</item>
+        <item name="textAllCaps">false</item>
+        <item name="actionBarSize">@dimen/sx_dp45</item>
+    </style>
+
+    <style name="SplashTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_launch</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <View style="@style/line_style" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/sx_dp10"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sx_dp1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/form_text_title_style"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:layout_marginRight="0dp"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp10"
+                android:text="基本信息"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/sx_sp16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/form_text_title_style"
+                    android:text="头&#12288;&#12288;像" />
+
+                <ImageView
+                    android:id="@+id/image_iv"
+                    android:layout_width="@dimen/sx_dp55"
+                    android:layout_height="@dimen/sx_dp55"
+                    android:layout_marginBottom="@dimen/sx_dp10"
+                    android:layout_marginTop="@dimen/sx_dp10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/chooseimg_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/sx_dp10"
+                    android:paddingRight="@dimen/sx_dp10">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="@dimen/sx_dp25"
+                        android:layout_height="@dimen/sx_dp20"
+                        android:tint="@android:color/black"
+                        app:srcCompat="@drawable/ic_icon_chooseimg" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/form_text_title_style"
+                    android:text="用&#8194;户&#8194;名" />
+
+                <EditText
+                    android:id="@+id/username_et"
+                    style="@style/form_text_content_left_style"
+                    tools:text="11111111111" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/form_text_title_style"
+                    android:gravity="top"
+                    android:text="个人简介" />
+
+                <EditText
+                    android:id="@+id/base_intro_et"
+                    style="@style/form_text_content_left_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sx_dp95"
+                    android:gravity="top"
+                    android:lines="5"
+                    tools:text="111ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss11" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/form_text_title_style"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:layout_marginTop="@dimen/sx_dp10"
+                android:layout_marginRight="0dp"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp10"
+                android:text="导师信息"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/sx_sp16" />
+
+            <LinearLayout
+                android:id="@+id/type_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/type_title_tv"
+                    style="@style/form_text_title_style"
+                    android:layout_height="wrap_content"
+                    android:text="*导师类型" />
+
+                <TextView
+                    android:id="@+id/type_tv"
+                    style="@style/form_text_content_left_style"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="请选择" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    android:tint="@android:color/black"
+                    app:srcCompat="@drawable/icon_arrow" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/identity_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/identity_title_tv"
+                    style="@style/form_text_title_style"
+                    android:layout_height="wrap_content"
+                    android:text="*导师身份" />
+
+                <TextView
+                    android:id="@+id/identity_tv"
+                    style="@style/form_text_content_left_style"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="请选择" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    android:tint="@android:color/black"
+                    app:srcCompat="@drawable/icon_arrow" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/field_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/field_title_tv"
+                    style="@style/form_text_title_style"
+                    android:layout_height="wrap_content"
+                    android:text="*研究领域" />
+
+                <TextView
+                    android:id="@+id/field_tv"
+                    style="@style/form_text_content_left_style"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="请选择" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    android:tint="@android:color/black"
+                    app:srcCompat="@drawable/icon_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/intro_title_tv"
+                    style="@style/form_text_title_style"
+                    android:gravity="top"
+                    android:text="*个人头衔" />
+
+                <EditText
+                    android:id="@+id/intro_et"
+                    style="@style/form_text_content_left_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sx_dp95"
+                    android:gravity="top"
+                    android:lines="5"
+                    android:hint="例如：师兄在线CEO" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/action_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sx_dp50"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pre_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_red_selector"
+            android:gravity="center"
+            android:text="上一步"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sx_sp14" />
+
+        <TextView
+            android:id="@+id/sub_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_green_selector"
+            android:gravity="center"
+            android:text="立即开通"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sx_sp14" />
+    </LinearLayout>
+
+</android.support.v7.widget.FitWindowsLinearLayout>

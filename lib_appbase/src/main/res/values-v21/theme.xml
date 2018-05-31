@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--默认Theme-->
+    <style name="AppTheme" parent="BaseAppTheme">
+        <!--状态栏是否覆盖在ContentView上-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+<!--    注意：
+        1、windowTranslucentStatus,如果为true，状态栏就会变成半透明的
+        2、windowTranslucentStatus、windowTranslucentNavigation，都可以触发LAYOUT_FULLSCREEN 、LAYOUT_STABLE-->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+</resources>

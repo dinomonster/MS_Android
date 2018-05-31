@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/sx_dp_0_7</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <declare-styleable name="BaseCustomView">
+        <attr name="color" format="color" />
+
+        <attr name="sx_image_mode" format="enum">
+            <enum name="round_rect" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <attr name="sx_round_radius" format="dimension" />
+
+        <attr name="sx_border_width" format="dimension" />
+        <attr name="sx_border_color" format="color|reference" />
+
+    </declare-styleable>
+
+    <declare-styleable name="BetterLoadingView">
+        <attr name="loading_width" format="dimension"/>
+        <attr name="android:color"/>
+    </declare-styleable>
+
+</resources>

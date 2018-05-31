@@ -1,0 +1,8 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.better.appbase.view.CommonToolBar
+        android:id="@+id/toolbar"
+        style="@style/topBar_style" />
+</merge>

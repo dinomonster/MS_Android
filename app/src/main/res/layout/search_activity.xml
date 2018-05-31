@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.better.appbase.view.CommonStatusBar
+            android:id="@+id/status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:statusBarScrim="@android:color/transparent">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sx_dp45"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_cancel"
+                        android:layout_width="@dimen/sx_dp45"
+                        android:layout_height="match_parent"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:gravity="center"
+                        android:text="取消"
+                        android:textColor="@color/title_text"
+                        android:textSize="@dimen/sx_sp14" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/sx_dp30"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/search_bg"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.hr.ms.ms_android.widget.XEditText
+                            android:id="@+id/et_search_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/sx_dp5"
+                            android:background="@null"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:hint="搜索关键词"
+                            android:imeOptions="actionSearch"
+                            android:singleLine="true"
+                            android:textColor="@color/color_777777"
+                            android:textColorHint="@color/color_999999"
+                            app:x_separator=""
+                            android:textSize="@dimen/sx_sp12" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/search_ll"
+                        android:layout_width="@dimen/sx_dp45"
+                        android:layout_height="match_parent"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_search"
+                            android:layout_width="@dimen/sx_dp17"
+                            android:layout_height="match_parent"
+                            android:transitionName="search"
+                            app:srcCompat="@drawable/icon_search" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sx_dp17"
+            android:layout_marginLeft="@dimen/sx_dp10"
+            android:layout_marginTop="@dimen/sx_dp17"
+            android:layout_weight="1"
+            android:text="搜索历史"
+            android:textColor="@color/title_text"
+            android:textSize="@dimen/sx_sp14" />
+
+        <LinearLayout
+            android:id="@+id/delete_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:paddingLeft="@dimen/sx_dp10"
+            android:paddingRight="@dimen/sx_dp10">
+
+            <ImageView
+                android:layout_width="@dimen/sx_dp16"
+                android:layout_height="@dimen/sx_dp17"
+                app:srcCompat="@drawable/icon_delete" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+
+</android.support.v7.widget.FitWindowsLinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_comment_nothing"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="50dp"
+    android:paddingTop="50dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawablePadding="10dp"
+        android:drawableTop="@mipmap/caijing_comment_nothing"
+        android:gravity="center"
+        android:text="暂无报名人"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/sx_sp14" />
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id ="@+id/text_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="时间降序"
+        android:layout_marginRight="@dimen/sx_dp3"
+        android:textColor="@color/content_text"
+        android:textSize="@dimen/sx_sp12"
+        android:gravity="center"
+        android:paddingBottom="@dimen/sx_dp12"
+        android:paddingLeft="@dimen/sx_dp5"
+        android:paddingRight="@dimen/sx_dp5"
+        android:paddingTop="@dimen/sx_dp12" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_up" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_down" />
+    </LinearLayout>
+</LinearLayout>

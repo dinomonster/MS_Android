@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/net_error_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/text_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:text="网络环境较差\n点击重新加载"
+        android:textSize="14sp"
+        android:textColor="@color/color_999999"/>
+
+    <FrameLayout
+        android:id="@+id/nothing_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_tv">
+        <ImageView
+            android:layout_width="@dimen/sx_dp108"
+            android:layout_height="@dimen/sx_dp107"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp"
+            android:src="@mipmap/course_nothing" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar_layout"/>
+
+
+    <View style="@style/line_style" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sx_dp5"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/sx_dp10"
+                        android:padding="@dimen/sx_dp10"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="菜单名称"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sx_dp16" />
+
+                    <EditText
+                        android:id="@+id/name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请%s菜单名称"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sx_dp15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/sx_dp10"
+                        android:padding="@dimen/sx_dp10"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="菜单类型"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sx_dp16" />
+
+                    <LinearLayout
+                        android:id="@+id/type_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/type_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="请选择"
+                            android:lines="1"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/sx_dp15" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/type_arrow"
+                            android:layout_width="@dimen/sx_dp18"
+                            android:layout_height="@dimen/sx_dp18"
+                            android:tint="@android:color/black"
+                            app:srcCompat="@drawable/icon_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/sx_dp10"
+                        android:padding="@dimen/sx_dp10"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="菜单路径"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sx_dp16" />
+
+                    <EditText
+                        android:id="@+id/url_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请%s菜单路径"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sx_dp15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/sx_dp10"
+                        android:padding="@dimen/sx_dp10"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="菜单标识"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sx_dp16" />
+
+                    <EditText
+                        android:id="@+id/tag_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请%s菜单标识"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sx_dp15" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/sx_dp10"
+                        android:padding="@dimen/sx_dp10"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="是否激活"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sx_dp16" />
+
+                    <LinearLayout
+                        android:id="@+id/isactivate_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/isactivate_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="请选择"
+                            android:lines="1"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/sx_dp15" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/isactivate_arrow"
+                            android:layout_width="@dimen/sx_dp18"
+                            android:layout_height="@dimen/sx_dp18"
+                            android:tint="@android:color/black"
+                            app:srcCompat="@drawable/icon_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_brown_selector"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</android.support.v7.widget.FitWindowsLinearLayout>

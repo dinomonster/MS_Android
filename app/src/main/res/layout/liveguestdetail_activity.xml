@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar_layout"/>
+
+
+    <View style="@style/line_style" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sx_dp5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/sx_dp5">
+
+
+                    <ImageView
+                        android:id="@+id/teacher_iv"
+                        android:layout_width="@dimen/sx_dp75"
+                        android:layout_height="@dimen/sx_dp75"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/sx_dp10"
+                        android:src="@drawable/default_head" />
+
+                    <TextView
+                        android:id="@+id/name_tv"
+                        android:layout_width="@dimen/sx_dp75"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minWidth="@dimen/sx_dp35"
+                        android:text="黄明华"
+                        android:textColor="#b2b2b2"
+                        android:textSize="@dimen/sx_sp11" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_image"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/type_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:minWidth="@dimen/sx_dp35"
+                            android:text="教授/学者"
+                            android:textColor="#b2b2b2"
+                            android:textSize="@dimen/sx_sp11" />
+
+                        <View
+                            android:layout_width="@dimen/sx_dp_0_7"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/sx_dp10"
+                            android:layout_marginRight="@dimen/sx_dp10"
+                            android:layout_marginTop="@dimen/sx_dp2"
+                            android:background="@color/line" />
+
+                        <TextView
+                            android:id="@+id/territory_tv"
+                            android:layout_width="@dimen/sx_dp58"
+                            android:layout_height="wrap_content"
+                            android:text="金融管理"
+                            android:textColor="#b2b2b2"
+                            android:textSize="@dimen/sx_sp11" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/sx_dp10"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:padding="@dimen/sx_dp10"
+                        android:text="分享主题"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sx_dp16" />
+
+                    <EditText
+                        android:id="@+id/sharetitle_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请%s分享主题"
+                        android:lines="1"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sx_dp15" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/sx_dp10"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:padding="@dimen/sx_dp10"
+                        android:text="公司名称"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sx_dp16" />
+
+                    <EditText
+                        android:id="@+id/company_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请%s公司名称"
+                        android:lines="1"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sx_dp15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/sx_dp10"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:padding="@dimen/sx_dp10"
+                        android:text="嘉宾头衔"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sx_dp16" />
+
+                    <EditText
+                        android:id="@+id/rank_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请%s嘉宾头衔"
+                        android:lines="1"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sx_dp15" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/sx_dp10"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:padding="@dimen/sx_dp10"
+                        android:text="分享时间"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sx_dp16" />
+
+                    <LinearLayout
+                        android:id="@+id/sharetime_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/sharetime_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="请选择"
+                            android:lines="1"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/sx_dp15" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/sharetime_arrow"
+                            android:layout_width="@dimen/sx_dp18"
+                            android:layout_height="@dimen/sx_dp18"
+                            android:tint="@android:color/black"
+                            app:srcCompat="@drawable/icon_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_brown_selector"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.FitWindowsLinearLayout>

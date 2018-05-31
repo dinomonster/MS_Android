@@ -1,0 +1,89 @@
+<resources>
+
+    <style name="FabButtonsStyle">
+        <item name="fab_size">mini</item>
+        <item name="fab_colorNormal">@color/main_color</item>
+        <item name="fab_colorPressed">@color/main_color_press</item>
+        <item name="fab_colorRipple">@color/main_color_disable</item>
+    </style>
+
+    <style name="dialog_style" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="alert_dialog_anim_style">
+        <item name="android:windowEnterAnimation">@anim/alert_dialog_show_anim</item>
+        <item name="android:windowExitAnimation">@anim/alert_dialog_hide_anim</item>
+    </style>
+
+    <style name="SearchAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:windowBackground">@drawable/white_rect_shape</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/sx_dp_0_5</item>
+        <item name="android:background">@color/line</item>
+    </style>
+
+    <style name="topBar_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="title_color">@color/title_text</item>
+        <item name="more_color">@color/title_text</item>
+        <item name="back_text_color">@color/title_text</item>
+    </style>
+
+    <style name="form_text_title_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginRight">@dimen/sx_dp20</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/sx_dp10</item>
+        <item name="android:paddingTop">@dimen/sx_dp20</item>
+        <item name="android:paddingBottom">@dimen/sx_dp20</item>
+        <item name="android:textColor">@color/content_text</item>
+        <item name="android:textSize">@dimen/sx_sp14</item>
+    </style>
+
+    <style name="form_text_content_left_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginRight">@dimen/sx_dp10</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:paddingLeft">@dimen/sx_dp10</item>
+        <item name="android:paddingTop">@dimen/sx_dp20</item>
+        <item name="android:paddingBottom">@dimen/sx_dp20</item>
+        <item name="android:textColor">@color/title_text</item>
+        <item name="android:textSize">@dimen/sx_sp14</item>
+        <item name="android:background">@null</item>
+    </style>
+
+
+    <style name="form_text_content_right_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginRight">@dimen/sx_dp10</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:paddingLeft">@dimen/sx_dp10</item>
+        <item name="android:paddingTop">@dimen/sx_dp20</item>
+        <item name="android:paddingBottom">@dimen/sx_dp20</item>
+        <item name="android:textColor">@color/title_text</item>
+        <item name="android:textSize">@dimen/sx_sp14</item>
+        <item name="android:background">@null</item>
+    </style>
+</resources>

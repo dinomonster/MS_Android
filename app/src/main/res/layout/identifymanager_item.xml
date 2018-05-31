@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/content_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/sx_dp10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp5"
+                    android:layout_weight="0.5"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="罗文锋"
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/sx_sp18" />
+
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp5"
+                    android:layout_weight="0.5"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="134 1160 8806"
+                    android:textColor="@color/content_text"
+                    android:textSize="@dimen/sx_sp15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/agent_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sx_dp3"
+                    android:layout_marginRight="@dimen/sx_dp3"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="未开通代言人"
+                    android:background="@drawable/shape_rect_main_color"
+                    android:textColor="@color/main_light"
+                    android:textSize="@dimen/sx_sp13" />
+
+                <TextView
+                    android:id="@+id/learning_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sx_dp3"
+                    android:layout_marginRight="@dimen/sx_dp3"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="未开通学霸"
+                    android:textColor="@color/main_light"
+                    android:background="@drawable/shape_rect_main_color"
+                    android:textSize="@dimen/sx_sp13" />
+
+                <TextView
+                    android:id="@+id/station_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sx_dp3"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="未开通站长"
+                    android:textColor="@color/main_light"
+                    android:background="@drawable/shape_rect_main_color"
+                    android:textSize="@dimen/sx_sp13" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/sx_dp8"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_more" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/sx_dp15"
+        android:layout_marginRight="@dimen/sx_dp15"
+        android:background="@color/line" />
+</LinearLayout>

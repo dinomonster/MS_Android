@@ -1,0 +1,61 @@
+<resources>
+    <!--<string-array name="course_manager_fenlei">-->
+        <!--<item>全部</item>-->
+        <!--<item>音频</item>-->
+        <!--<item>视频</item>-->
+    <!--</string-array>-->
+
+    <string-array name="course_manager_laiyuan">
+        <item>自建的</item>
+        <item>购买的</item>
+    </string-array>
+    <string-array name="course_manager_laiyuan2">
+        <item>自建的</item>
+    </string-array>
+
+    <!--<string-array name="course_list_type">-->
+        <!--<item>全部课程</item>-->
+        <!--<item>未学的</item>-->
+        <!--<item>已学完</item>-->
+        <!--<item>学习中</item>-->
+    <!--</string-array>-->
+    <string-array name="course_list_type">
+        <item>视频</item>
+        <item>音频</item>
+    </string-array>
+
+    <string-array name="super_scholar_list_type">
+        <item>本周排行</item>
+        <item>本月排行</item>
+        <item>年度排行</item>
+    </string-array>
+
+    <array name="waveSideBarLetters">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </array>
+</resources>

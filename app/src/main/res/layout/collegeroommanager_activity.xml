@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout"/>
+
+
+    <View style="@style/line_style" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yyydjk.library.DropDownMenu
+            android:id="@+id/dropDownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent_color"
+            app:dddividerColor="@color/line"
+            app:dddividerHeight="@dimen/sx_dp10"
+            app:ddmenuBackgroundColor="@android:color/white"
+            app:ddmenuSelectedIcon="@mipmap/icon_down_press"
+            app:ddmenuTextSize="@dimen/sx_sp12"
+            app:ddmenuUnselectedIcon="@mipmap/icon_down"
+            app:ddtextSelectedColor="@color/main_color"
+            app:ddtextUnselectedColor="@color/content_text"
+            app:ddunderlineColor="@color/transparent_color" />
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_add"
+            android:layout_width="@dimen/sx_dp50"
+            android:layout_height="@dimen/sx_dp50"
+            android:layout_marginBottom="@dimen/sx_dp50"
+            android:layout_marginRight="@dimen/sx_dp10"
+            android:padding="@dimen/sx_dp1"
+            android:layout_gravity="bottom|right"
+            android:src="@mipmap/icon_addcollege"
+            app:fab_colorNormal="@color/main_color"
+            app:fab_colorPressed="@color/main_color_press"
+            app:fab_colorRipple="@color/main_color_disable"/>
+
+    </FrameLayout>
+</android.support.v7.widget.FitWindowsLinearLayout>

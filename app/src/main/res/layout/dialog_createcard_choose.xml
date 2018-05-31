@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/sx_dp345"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_rect_shape"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sx_dp50"
+        android:layout_marginBottom="@dimen/sx_dp50"
+        android:layout_marginLeft="@dimen/sx_dp40"
+        android:layout_marginRight="@dimen/sx_dp40"
+        android:gravity="center"
+        android:text="师兄在线（中山）驿站开通成功\n是否立即分配电子代言卡？"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sx_sp14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sx_dp43"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/next_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="下次分配"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/sx_sp14" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/sx_dp16"
+            android:layout_marginBottom="@dimen/sx_dp16"
+            android:background="@color/line" />
+        <TextView
+            android:id="@+id/now_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="立即分配"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/sx_sp14" />
+
+    </LinearLayout>
+</LinearLayout>

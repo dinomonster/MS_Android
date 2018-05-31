@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sx_login_out_info1">Login Safety Tips</string>
+    <string name="sx_login_out_info2">Login</string>
+    <string name="sx_login_out_info3">Change Password</string>
+
+    <string name="sx_item_be_grind_info1">Grind Seat</string>
+    <string name="sx_item_be_grind_info2">Grind enjoy more rights</string>
+    <string name="sx_item_be_grind_info3">Become Grind</string>
+
+    <string name="sx_learn_books_tab1">Week Report</string>
+    <string name="sx_learn_books_tab2">Study List</string>
+    <string name="sx_week_report_learning_time">This Week Learning time</string>
+    <string name="sx_week_report_learning_experience">This Week Learning experience</string>
+
+    <string name="sx_study_list_history_record">Watch history</string>
+    <string name="sx_study_list_live_list">Pre-ordered live</string>
+    <string name="sx_study_list_offline_registration">Enrollment activities</string>
+    <string name="sx_study_list_experience_notes">Experience notes</string>
+    <string name="sx_study_list_honor_certificate">Honor certificate</string>
+
+    <string name ="app_name">Brother Online</string><![CDATA[
+    
+    ]]><string name ="no_zhiwei_watch">Talent pool has a lot of talented people Oh \ nHave to release posts ah</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    ]]>
+    <string name ="share_to_wx">share to</string>
+    <string name ="share_to_wx_timeline">circle of friends</string>
+    <string name ="share_to_wx_friend">wechat friend</string>
+    <string name ="share_to_wx_contacts">phone contacts</string>
+    <string name ="app_cancel">Cancel</string>
+    <string name ="search_default">search</string>
+    <string name ="confirm">OK</string>
+    <string name ="cancel">cancel</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ]]>
+    <string name ="pay_course">purchase this course</string>
+    <string name ="pay_course_wx">WeChat Pay</string>
+    <string name ="study_rank">endorsement</string><![CDATA[
+    
+    
+    
+    
+    
+
+
+    
+    ]]><string name ="course_search">Search for the course you are interested in</string><![CDATA[
+    
+    
+    
+    
+    
+    ]]><string name ="lesson_buy_know">I got it</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    ]]>
+    <string name ="course_edit">edit</string>
+    <string name ="course_delete">delete</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ]]>
+    <string name ="homepage">Find</string>
+    <string name ="my_about">My</string>
+    <string name ="my_join">LearnBook</string>
+    <string name ="my_classroom">private school</string><![CDATA[
+    
+    ]]>
+    <string name ="my_bill">wallet</string>
+    <string name ="my_college">college</string><![CDATA[
+    
+    
+    
+    
+    
+
+
+
+    
+    
+    
+    
+    
+    
+    ]]>
+    <string name ="my_inviting_friends">Inviting friends</string>
+    <string name ="my_represent_code">Represent Code：</string>
+    <string name ="my_wallet">My Wallet</string>
+    <string name ="my_resume">My Resume</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    ]]><string name ="my_wallet_reflect">withdrawals</string><![CDATA[
+    
+    
+    
+    ]]>
+    <string name ="login_out">Logout</string>
+    <string name ="sx_user">User</string>
+    <string name ="sx_people">People</string>
+    <string name ="sx_grind">Grind</string>
+    <string name ="sx_spokesman">SpokesMan</string>
+    <string name ="sx_tutor">Tutor</string>
+    <string name ="sx_student">Student</string>
+
+    <string name ="help_tips">Any business advice, complaint suggestions, etc., please feel free to contact us by the following methods: Weekdays 9: 00-18: 00</string>
+    <string name ="help_wx_service">WeChat public service number</string>
+    <string name ="wx_service_name">Brother online</string>
+    <string name ="help_qq_service">Enterprise QQ service number</string>
+    <string name ="qq_service_no">3347902308</string>
+    <string name ="help_phone_no">Customer Service Hotline</string>
+    <string name ="phone_no">400-880-1033</string>
+    <string name ="about_manager_knowledge">Global Business Administration Knowledge Sharing Platform</string><![CDATA[
+    
+    
+    
+    
+    ]]>
+    <string name ="remaining_money">Zero balance</string>
+    <string name ="reflect_all_money">All withdrawals</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    ]]>
+    <string name ="change_password">change password</string>
+    <string name ="save_photo">save image to album</string>
+    <string name ="title_publish">publish event</string><![CDATA[
+    
+    
+    
+
+
+
+    
+    ]]><string name ="share_no_map">You have not installed high German or Baidu map, can not jump navigation</string><![CDATA[
+    
+    ]]><string name ="sex">gender</string><![CDATA[
+    
+    
+    
+
+    
+    ]]>
+    <string name ="name">name</string>
+    <string name ="addr_detail">detailed address</string>
+    <string name ="fill_detail_addr">detailed address, specific house number</string><![CDATA[
+    
+    
+    
+    
+    
+    ]]>
+    <string name ="hot_city">Top cities</string>
+    <string name ="located_city">locate city</string>
+
+     <string name ="hint_search_box">Please enter city name or pinyin</string>
+     <string name ="nothing_found">no search results ~</string>
+     <string name ="locating">positioning ...</string>
+     <string name ="located_failed">Positioning failed</string><![CDATA[
+    
+    
+    
+     ]]><string name ="no_net">Poor network environment \ nClick Reload</string><![CDATA[
+    
+    
+    
+    
+
+
+     ]]>
+    <string name ="actiity_publish_success">Event posted successfully pending a review</string>
+     <string name ="actiity_publish_fail">The network is abnormal, please republish after the network is normal</string><![CDATA[
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     ]]><string name ="hint_activity_details">Please enter the event details</string><![CDATA[
+    
+
+
+
+    ]]>
+    <string name="sx_see_more">see more</string>
+    <string name="sx_more">more</string>
+    <string name="sx_already_in_the_end">already in the end</string>
+    <string name="sx_setting">setting</string>
+    <string name="sx_help_and_feedback">help and feedback</string>
+    <string name="sx_about_brothers_online">sx_about brothers online</string>
+    <string name="sx_rate_us">rate us</string>
+    <string name="sx_account_and_security">account and security</string>
+    <string name="sx_bind_micro_signal">bind micro signal</string>
+
+    <string name="sx_invitation_record">invitation record</string>
+    <string name="sx_long_press_pictures_to_save_to_album">long press pictures to save to album</string>
+    <string name="sx_one_click_invitation">one click invitation</string>
+    <string name="sx_current_balance">current balance</string>
+    <string name="sx_bills">bills</string>
+    <string name="sx_cumulative_income">cumulative income</string>
+    <string name="sx_cumulative_withdrawal">cumulative withdrawal</string>
+    <string name="sx_present_pending">present pending</string>
+    <string name="sx_integral">integral</string>
+    <string name="sx_my_certificate">my certificate</string>
+    <string name="sx_star_rating_details">star rating details</string>
+    <string name="sx_download_the_certificate">download the certificate</string>
+
+    <string name="sx_my_bill">my bill</string>
+    <string name="sx_my_cash">my cash</string>
+
+</resources>

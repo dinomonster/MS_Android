@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FromTopAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_top_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_top_exit</item>
+    </style>
+
+    <style name="FromBottomAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_bottom_exit</item>
+    </style>
+
+    <style name="SlideTopAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_top_enter</item>
+        <item name="android:windowExitAnimation">@anim/slide_top_exit</item>
+    </style>
+</resources>

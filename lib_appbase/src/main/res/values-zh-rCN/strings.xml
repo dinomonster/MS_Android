@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sx_login_out_info1">安全登录提示</string>
+    <string name="sx_login_out_info2">重新登录</string>
+    <string name="sx_login_out_info3">修改密码</string>
+
+    <string name="sx_item_be_grind_info1">学霸席</string>
+    <string name="sx_item_be_grind_info2">学霸尊享更多权益</string>
+    <string name="sx_item_be_grind_info3">成为学霸</string>
+
+    <string name="sx_learn_books_tab1">本周成绩单</string>
+    <string name="sx_learn_books_tab2">学习清单</string>
+    <string name="sx_week_report_learning_time">本周学习时长</string>
+    <string name="sx_week_report_learning_experience">本周学习心得</string>
+
+    <string name="sx_study_list_history_record">播放历史</string>
+    <string name="sx_study_list_live_list">已预约直播</string>
+    <string name="sx_study_list_offline_registration">已报名活动</string>
+    <string name="sx_study_list_experience_notes">心得笔记</string>
+    <string name="sx_study_list_honor_certificate">修业证书</string>
+
+    <string name="app_name">师兄在线</string>
+    <string name="no_zhiwei_watch">人才库有大量优秀人才哦 \n快去发布职位啊</string>
+
+
+    <string name="share_to_wx">分享到</string>
+    <string name="share_to_wx_timeline">朋友圈</string>
+    <string name="share_to_wx_friend">微信好友</string>
+    <string name="share_to_wx_contacts">手机通讯录</string>
+    <string name="app_cancel">取消</string>
+    <string name="search_default">搜索</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="pay_course">购买本次课程</string>
+    <string name="pay_course_wx">微信支付</string>
+    <string name="study_rank">代言榜</string>
+
+
+    <string name="course_search">搜索你感兴趣的课程</string>
+    <string name="lesson_buy_know">我知道了</string>
+
+
+    <string name="course_edit">编辑</string>
+    <string name="course_delete">删除</string>
+    <string name="homepage">发现</string>
+    <string name="my_about">我的</string>
+    <string name="my_join">学习账本</string>
+    <string name="my_classroom">私塾</string>
+    <string name="my_bill">钱包</string>
+    <string name="my_college">学院</string>
+
+
+    <string name="my_inviting_friends">邀请好友</string>
+    <string name="my_represent_code">代言号：</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="my_resume">我的简历</string>
+    <string name="my_wallet_reflect">提现</string>
+    <string name="login_out">退出登录</string>
+    <string name="sx_user">用户</string>
+    <string name="sx_people">人</string>
+    <string name="sx_grind">学霸</string>
+    <string name="sx_spokesman">代言</string>
+    <string name="sx_tutor">导师</string>
+    <string name="sx_student">学生</string>
+
+
+    <string name="help_tips">任何业务咨询、投诉建议等，欢迎通过以下方式和我们联系，工作日（周一至周五）9:00-18:00</string>
+    <string name="help_wx_service">微信公众服务号</string>
+    <string name="wx_service_name">师兄在线</string>
+    <string name="help_qq_service">企业QQ服务号</string>
+    <string name="qq_service_no">3347902308</string>
+    <string name="help_phone_no">客服热线</string>
+    <string name="phone_no">400-880-1033</string>
+    <string name="about_manager_knowledge">全球工商管理知识共享平台</string>
+    <string name="remaining_money">零钱余额</string>
+    <string name="reflect_all_money">全部提现</string>
+    <string name="change_password">修改密码</string>
+    <string name="save_photo">保存图片到相册</string>
+    <string name="title_publish">发布活动</string>
+
+
+    <string name="share_no_map">您尚未安装高德或者百度地图，无法跳转导航</string>
+    <string name="sex">性别</string>
+    <string name="name">姓名</string>
+    <string name="addr_detail">详细地址</string>
+    <string name="fill_detail_addr">详细地址、具体门牌号</string>
+    <string name="hot_city">热门城市</string>
+    <string name="located_city">定位城市</string>
+
+
+
+    <string name="hint_search_box">请输入城市名或拼音</string>
+    <string name="nothing_found">没有搜索结果~</string>
+    <string name="locating">正在定位…</string>
+    <string name="located_failed">定位失败</string>
+    <string name="no_net">网络环境较差\n点击重新加载</string>
+
+
+    <string name="actiity_publish_success">活动发布成功，等待审核</string>
+    <string name="actiity_publish_fail">网络异常，请在网络正常后重新发布</string>
+    <string name="hint_activity_details">请输入活动具体详情</string>
+
+    <string name="sx_see_more">查看更多</string>
+    <string name="sx_more">更多</string>
+    <string name="sx_already_in_the_end">已经到底啦</string>
+    <string name="sx_setting">设置</string>
+    <string name="sx_help_and_feedback">帮助与反馈</string>
+    <string name="sx_about_brothers_online">关于师兄在线</string>
+    <string name="sx_rate_us">给我们评分</string>
+    <string name="sx_account_and_security">账号与安全</string>
+    <string name="sx_bind_micro_signal">绑定微信号</string>
+
+    <string name="sx_invitation_record">邀请记录</string>
+    <string name="sx_long_press_pictures_to_save_to_album">长按图片保存到相册</string>
+    <string name="sx_one_click_invitation">一键邀请</string>
+    <string name="sx_current_balance">当前余额</string>
+    <string name="sx_bills">账单</string>
+    <string name="sx_cumulative_income">累计收入</string>
+    <string name="sx_cumulative_withdrawal">累计提现</string>
+    <string name="sx_present_pending">提现待审</string>
+    <string name="sx_integral">积分</string>
+    <string name="sx_my_certificate">我的证书</string>
+    <string name="sx_star_rating_details">评星明细</string>
+    <string name="sx_download_the_certificate">下载证书</string>
+    <string name="sx_my_bill">我的账单</string>
+
+
+    <string name="sx_my_cash">我的提现</string>
+
+</resources>

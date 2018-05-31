@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_comment_nothing"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="50dp"
+    android:paddingTop="50dp">
+
+    <ImageView
+        android:layout_width="@dimen/sx_dp160"
+        android:layout_height="@dimen/sx_dp160"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/common_nodata_jiangtang" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/sx_dp10"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="您还没有参与任何师兄讲堂哦~\n快去看看讲堂课程吧"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/sx_sp13" />
+
+</LinearLayout>

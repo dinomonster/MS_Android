@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BetterTabLayout">
+
+        <attr name="tabTopLineHeight" format="color" />
+        <attr name="tabTopLineColor" format="dimension" />
+
+        <attr name="tabBottomLineColor" format="color" />
+        <attr name="tabBottomLineHeight" format="dimension" />
+
+        <attr name="tabIndicatorInFront" format="boolean" />
+        <attr name="tabIndicatorWithoutPadding" format="boolean" />
+        <attr name="tabIndicatorAlwaysInCenter" format="boolean" />
+
+        <attr name="tabIndicatorColor" format="color" />
+        <attr name="tabIndicatorHeight" format="dimension" />
+        <attr name="tabIndicatorHorizontalPadding" format="dimension" />
+
+        <attr name="tabIndicatorGravity" format="enum">
+            <enum name="bottom" value="0" />
+            <enum name="top" value="1" />
+            <enum name="center" value="2" />
+        </attr>
+
+        <attr name="tabDividerColor" format="color|reference" />
+        <attr name="tabDividerHeight" format="dimension" />
+
+        <attr name="tabBackground" format="reference" />
+        <attr name="tabTextAllCaps" format="boolean" />
+        <attr name="tabTextColors" format="color|reference" />
+        <attr name="tabTextSize" format="dimension" />
+        <attr name="tabTextHorizontalPadding" format="dimension" />
+        <attr name="tabTextMinWidth" format="dimension" />
+        <attr name="tabLayoutId" format="reference" />
+        <attr name="tabTextViewId" format="reference" />
+        <attr name="tabDistributeEvenly" format="boolean" />
+        <attr name="tabClickable" format="boolean" />
+        <attr name="tabTitleOffset" format="dimension">
+            <enum name="auto_center" value="-1" />
+        </attr>
+
+    </declare-styleable>
+</resources>

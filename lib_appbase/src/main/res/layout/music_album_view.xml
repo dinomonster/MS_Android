@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="@dimen/sx_dp150"
+        android:layout_height="@dimen/sx_dp150"
+        android:layout_marginTop="@dimen/sx_sp15"
+        android:layout_gravity="center_horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/album_view1"
+            android:layout_width="@dimen/sx_dp150"
+            android:layout_height="@dimen/sx_dp150"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/sx_dp5" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/image_cover"
+            android:layout_width="@dimen/sx_dp93"
+            android:layout_height="@dimen/sx_dp93"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/album_view3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" />
+
+    </FrameLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/image_needle"
+        android:layout_width="@dimen/sx_dp40"
+        android:layout_height="@dimen/sx_dp95"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/sx_dp68" />
+</merge>

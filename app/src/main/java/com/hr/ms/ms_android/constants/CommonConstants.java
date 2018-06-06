@@ -6,6 +6,7 @@ public class CommonConstants {
     public static final int GET_IDCARD_IMAGE = 102; //拍照获取图片
 
 
+    public static  final String DATE = "DATE";
     public static  final String KEY = "KEY";
     public static  final String MSG = "MSG";
     public static  final String PARAMS = "PARAMS";
@@ -13,6 +14,7 @@ public class CommonConstants {
     public static  final String TYPE = "TYPE";//TYPE传递
     public static  final String ID = "ID";//ID传递
     public static  final String BEAN = "BEAN";//实体传递
+    public static  final String USERBEAN = "USERBEAN";
 
     public static  final String ACTIVITYSTATUS = "ACTIVITYSTATUS";//页面状态
     public static  final int STATUS_DETAIL = 0;//详情

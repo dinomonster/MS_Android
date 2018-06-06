@@ -7,9 +7,11 @@ import android.text.TextUtils
  */
 
 object CodeStringUtils {
-
     val isOrNoCode = arrayListOf(0, 1)//0不是 1是
     val tagTypeCode = arrayListOf(1, 2, 3, 4)//1:课题标签 2:身份标签 3:研究/感兴趣领域 4:企业行业领域
+
+    val imManagerTypeCode = arrayListOf(1, 2)
+    val imManagerTypeString = arrayOf("辅导员", "金句编写者")
 
     val stageCodeArry = arrayListOf(0, 1, 2)
     val stageStringArry = arrayListOf("个人驿站", "城市驿站", "校园驿站")
@@ -28,6 +30,9 @@ object CodeStringUtils {
 
     val sortRuleCode = arrayListOf(1, 2)
     val sortRuleString = arrayListOf("时间升序", "时间降序")
+    //服务给的太随意，无奈
+    val sortRuleCode2 = arrayListOf(1, 2)
+    val sortRuleString2 = arrayListOf("时间降序", "时间升序")
 
     val topicTypeCode = arrayListOf(3, 1, 2)
     val topicTypeString = arrayListOf("全部", "音频", "视频")
@@ -47,8 +52,54 @@ object CodeStringUtils {
     val userIdentityTypeCode = arrayListOf(null, 1, 2)
     val userIdentityTypeString = arrayListOf("全部", "导师", "客座嘉宾")
 
+    val eventStatusCode = arrayListOf(null, 0, 1, 2, 3, 4)
+    val eventStatusString = arrayListOf("全部", "审核中", "被拒绝", "报名中", "已结束", "进行中")
+
+    val activityTypeCode = arrayListOf(null, 1, 2, 3)
+    val activityTypeString = arrayListOf("全部", "仅线下", "仅直播", "线下同步直播")
+    val activityTypeString2 = arrayOf("线下活动", "直播活动", "线下同步直播")
+
+
+    val nodeTypeString = arrayOf("签到", "嘉宾分享", "中场休息", "嘉宾互动", "活动结束", "嘉宾晚宴")
+    val nodeTypeCode = arrayOf(1, 2, 3, 4, 5, 6)
+
     private fun notNULL(code: String): String {
         return if (TextUtils.isEmpty(code)) "" else code
+    }
+
+
+    fun getNodeTypeString(code: Int?): String {
+        return when (code) {
+            nodeTypeCode[0] -> nodeTypeString[0]
+            nodeTypeCode[1] -> nodeTypeString[1]
+            nodeTypeCode[2] -> nodeTypeString[2]
+            nodeTypeCode[3] -> nodeTypeString[3]
+            nodeTypeCode[4] -> nodeTypeString[4]
+            nodeTypeCode[5] -> nodeTypeString[5]
+            else -> ""
+        }
+    }
+
+    /**
+     * 运营管理=》用户列表=》身份类型
+     * @param code
+     * @return
+     */
+    fun getActivityTypeString(code: Int?): String {
+        return when (code) {
+            activityTypeCode[1] -> activityTypeString2[0]
+            activityTypeCode[2] -> activityTypeString2[1]
+            activityTypeCode[3] -> activityTypeString2[2]
+            else -> ""
+        }
+    }
+
+    fun getImManagerTypeString(code: Int?): String {
+        return when (code) {
+            imManagerTypeCode[0] -> imManagerTypeString[0]
+            imManagerTypeCode[1] -> imManagerTypeString[1]
+            else -> ""
+        }
     }
 
     /**
@@ -216,6 +267,32 @@ object CodeStringUtils {
             auditStatusString[1] -> auditStatusCode[1]
             auditStatusString[2] -> auditStatusCode[2]
             auditStatusString[3] -> auditStatusCode[3]
+            else -> -1
+        }
+    }
+
+
+    /**
+     * 官方活动状态
+     * @param code
+     * @return
+     */
+    fun getEventStatusString(code: Int?): String? {
+        return when (code) {
+            eventStatusCode[0] -> eventStatusString[0]
+            eventStatusCode[1] -> eventStatusString[1]
+            eventStatusCode[2] -> eventStatusString[2]
+            eventStatusCode[3] -> eventStatusString[3]
+            else -> ""
+        }
+    }
+
+    fun getEventStatusCode(code: String?): Int? {
+        return when (code) {
+            eventStatusString[0] -> eventStatusCode[0]
+            eventStatusString[1] -> eventStatusCode[1]
+            eventStatusString[2] -> eventStatusCode[2]
+            eventStatusString[3] -> eventStatusCode[3]
             else -> -1
         }
     }

@@ -18,12 +18,13 @@ import android.widget.Toast;
 import com.better.appbase.recyclerview.BaseRecyclerViewAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.hr.ms.ms_android.R;
+import com.hr.ms.ms_android.bean.InputDialogBean;
 
 
 public class DialogHelper {
-    private Activity    mActivity;
+    private Activity mActivity;
     private AlertDialog mAlertDialog;
-    private Toast       mToast;
+    private Toast mToast;
 
     public DialogHelper(Activity activity) {
         mActivity = activity;
@@ -31,19 +32,13 @@ public class DialogHelper {
 
     /**
      * 弹对话框
-     * 
-     * @param title
-     *            标题
-     * @param msg
-     *            消息
-     * @param positive
-     *            确定
-     * @param positiveListener
-     *            确定回调
-     * @param negative
-     *            否定
-     * @param negativeListener
-     *            否定回调
+     *
+     * @param title            标题
+     * @param msg              消息
+     * @param positive         确定
+     * @param positiveListener 确定回调
+     * @param negative         否定
+     * @param negativeListener 否定回调
      */
     public void alert(final String title, final String msg, final String positive,
                       final DialogInterface.OnClickListener positiveListener,
@@ -53,21 +48,14 @@ public class DialogHelper {
 
     /**
      * 弹对话框
-     * 
-     * @param title
-     *            标题
-     * @param msg
-     *            消息
-     * @param positive
-     *            确定
-     * @param positiveListener
-     *            确定回调
-     * @param negative
-     *            否定
-     * @param negativeListener
-     *            否定回调
-     * @param isCanceledOnTouchOutside
-     *            是否可以点击外围框
+     *
+     * @param title                    标题
+     * @param msg                      消息
+     * @param positive                 确定
+     * @param positiveListener         确定回调
+     * @param negative                 否定
+     * @param negativeListener         否定回调
+     * @param isCanceledOnTouchOutside 是否可以点击外围框
      */
     public void alert(final String title, final String msg, final String positive,
                       final DialogInterface.OnClickListener positiveListener,
@@ -104,29 +92,26 @@ public class DialogHelper {
     }
 
 
-
-
-    public AlertDialog getDialog(){
+    public AlertDialog getDialog() {
         return mAlertDialog;
     }
+
     /**
      * TOAST
-     * 
-     * @param msg
-     *            消息
-     * @param period
-     *            时长
+     *
+     * @param msg    消息
+     * @param period 时长
      */
     public void toast(final String msg, final int period) {
         mActivity.runOnUiThread(new Runnable() {
 
             @Override
             public void run() {
-                if(mToast==null){
+                if (mToast == null) {
                     mToast = new Toast(mActivity);
                 }
                 View view = LayoutInflater.from(mActivity).inflate(
-                    R.layout.transient_notification, null);
+                        R.layout.transient_notification, null);
                 TextView tv = (TextView) view.findViewById(android.R.id.message);
                 tv.setText(msg);
                 mToast.setView(view);
@@ -141,10 +126,8 @@ public class DialogHelper {
     /**
      * 显示对话框
      *
-     * @param showProgressBar
-     *            是否显示圈圈
-     * @param msg
-     *            对话框信息
+     * @param showProgressBar 是否显示圈圈
+     * @param msg             对话框信息
      */
     public void showProgressDialog(boolean showProgressBar, String msg) {
         showProgressDialog(msg, true, null, showProgressBar);
@@ -153,8 +136,7 @@ public class DialogHelper {
     /**
      * 显示进度对话框
      *
-     * @param msg
-     *            消息
+     * @param msg 消息
      */
     public void showProgressDialog(final String msg) {
         showProgressDialog(msg, true, null, true);
@@ -162,9 +144,8 @@ public class DialogHelper {
 
     /**
      * 显示可取消的进度对话框
-     * 
-     * @param msg
-     *            消息
+     *
+     * @param msg 消息
      */
     public void showProgressDialog(final String msg, final boolean cancelable,
                                    final OnCancelListener cancelListener,
@@ -214,18 +195,18 @@ public class DialogHelper {
                 if (mActivity == null || mActivity.isFinishing()) {
                     return;
                 }
-                AlertDialog.Builder builder = new AlertDialog.Builder(mActivity,R.style.dialog);
+                AlertDialog.Builder builder = new AlertDialog.Builder(mActivity, R.style.dialog);
                 mAlertDialog = builder.show();
 
                 WindowManager m = mActivity.getWindowManager();
-                Window dialogWindow=mAlertDialog.getWindow();
+                Window dialogWindow = mAlertDialog.getWindow();
                 Display d = m.getDefaultDisplay(); // 获取屏幕宽、高用
                 WindowManager.LayoutParams p = dialogWindow.getAttributes(); // 获取对话框当前的参数值
 //                p.height = (int) (d.getHeight() * 0.3); // 高度设置为屏幕的
                 p.width = (int) (d.getWidth() * 0.8); // 宽度设置为屏幕的
                 dialogWindow.setAttributes(p);
 
-                View view =  LayoutInflater.from(mActivity).inflate(R.layout.dialog_createcard_choose,null);
+                View view = LayoutInflater.from(mActivity).inflate(R.layout.dialog_createcard_choose, null);
                 mAlertDialog.setContentView(view);
 
                 TextView next_tv = (TextView) view.findViewById(R.id.next_tv);
@@ -252,11 +233,11 @@ public class DialogHelper {
                 if (mActivity == null || mActivity.isFinishing()) {
                     return;
                 }
-                AlertDialog.Builder builder = new AlertDialog.Builder(mActivity,R.style.dialog);
+                AlertDialog.Builder builder = new AlertDialog.Builder(mActivity, R.style.dialog);
                 mAlertDialog = builder.show();
 
                 WindowManager m = mActivity.getWindowManager();
-                Window dialogWindow=mAlertDialog.getWindow();
+                Window dialogWindow = mAlertDialog.getWindow();
                 Display d = m.getDefaultDisplay(); // 获取屏幕宽、高用
                 WindowManager.LayoutParams p = dialogWindow.getAttributes(); // 获取对话框当前的参数值
 //                p.height = (int) (d.getHeight() * 0.3); // 高度设置为屏幕的
@@ -264,12 +245,58 @@ public class DialogHelper {
                 dialogWindow.setAttributes(p);
                 dialogWindow.clearFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);//设置可弹出输入法
 
-                View view =  LayoutInflater.from(mActivity).inflate(R.layout.dialog_createcard,null);
+                View view = LayoutInflater.from(mActivity).inflate(R.layout.dialog_createcard, null);
                 mAlertDialog.setContentView(view);
 
                 TextView cancel_tv = (TextView) view.findViewById(R.id.cancel_tv);
                 TextView sure_tv = (TextView) view.findViewById(R.id.sure_tv);
                 EditText num_et = (EditText) view.findViewById(R.id.num_et);
+                cancel_tv.setOnClickListener(listener1);
+                sure_tv.setOnClickListener(listener2);
+
+                mAlertDialog.setCancelable(false);
+                mAlertDialog.setCanceledOnTouchOutside(false);
+//                mAlertDialog.getWindow().setWindowAnimations(R.style.dialogWindowAnim);
+            }
+        });
+    }
+
+
+    public void showInputDialog(final InputDialogBean dialogBean, final View.OnClickListener listener1, final View.OnClickListener listener2) {
+        dismissProgressDialog();
+        mActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (mActivity == null || mActivity.isFinishing()) {
+                    return;
+                }
+                AlertDialog.Builder builder = new AlertDialog.Builder(mActivity, R.style.dialog);
+                mAlertDialog = builder.show();
+
+                WindowManager m = mActivity.getWindowManager();
+                Window dialogWindow = mAlertDialog.getWindow();
+                Display d = m.getDefaultDisplay(); // 获取屏幕宽、高用
+                WindowManager.LayoutParams p = dialogWindow.getAttributes(); // 获取对话框当前的参数值
+//                p.height = (int) (d.getHeight() * 0.3); // 高度设置为屏幕的
+                p.width = (int) (d.getWidth() * 0.8); // 宽度设置为屏幕的
+                dialogWindow.setAttributes(p);
+                dialogWindow.clearFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);//设置可弹出输入法
+
+                View view = LayoutInflater.from(mActivity).inflate(R.layout.dialog_input, null);
+                mAlertDialog.setContentView(view);
+
+                TextView title_tv = view.findViewById(R.id.title_tv);
+                TextView input_title_tv = view.findViewById(R.id.input_title_tv);
+                EditText input_et = view.findViewById(R.id.input_et);
+                TextView suffix_tv = view.findViewById(R.id.suffix_tv);
+                TextView cancel_tv = view.findViewById(R.id.cancel_tv);
+                TextView sure_tv = view.findViewById(R.id.sure_tv);
+                title_tv.setText(dialogBean.getTitle());
+                input_title_tv.setText(dialogBean.getInputTitle());
+                input_et.setHint(dialogBean.getInputHint());
+                suffix_tv.setText(dialogBean.getSuffix());
+                cancel_tv.setText(dialogBean.getCancel());
+                sure_tv.setText(dialogBean.getSure());
                 cancel_tv.setOnClickListener(listener1);
                 sure_tv.setOnClickListener(listener2);
 
@@ -289,7 +316,7 @@ public class DialogHelper {
 
         @Override
         protected void convert(BaseViewHolder helper, final DataBean item) {
-            helper.setText(R.id.content_tv,item.getContent());
+            helper.setText(R.id.content_tv, item.getContent());
         }
 
     }

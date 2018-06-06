@@ -26,34 +26,34 @@ class TeachersManagerAdapter(recyclerView: RecyclerView) : BaseRecyclerViewAdapt
 
 
         helper.getView<View>(R.id.more).setOnClickListener {
-            BottomMenuDialog().showBottomDialog(
-                    mContext!!,
-                    arrayOf("删除","编辑"),
-                    object : BottomMenuDialog.BootomListener {
-                        override fun onClick(which: Int) {
-                            MaterialDialog.Builder(mContext)
-                                    .title("提示")
-                                    .content("确认删除？")
-                                    .positiveColor(mContext.resources.getColor(R.color.success_status))
-                                    .negativeColor(mContext.resources.getColor(R.color.tip_text))
-                                    .positiveText("确认")
-                                    .negativeText("取消")
-                                    .onPositive { _, _ ->
-                                        notifyItemRemoved(helper.adapterPosition)
-                                    }
-                                    .show()
-                        }
-                    },
-                    object : BottomMenuDialog.BootomListener {
-                        override fun onClick(which: Int) {
-                            var intent = Intent()
-                            intent.setClass(mContext, TeachersDetailActivity::class.java)
-                            intent.putExtra(ACTIVITYSTATUS, STATUS_EDIT)
-                            intent.putExtra(CommonConstants.BEAN,item)
-                            mContext.startActivity(intent)
-                        }
-                    }
-            )
+//            BottomMenuDialog().showBottomDialog(
+//                    mContext!!,
+//                    arrayOf("删除","编辑"),
+//                    object : BottomMenuDialog.BootomListener {
+//                        override fun onClick(which: Int) {
+//                            MaterialDialog.Builder(mContext)
+//                                    .title("提示")
+//                                    .content("确认删除？")
+//                                    .positiveColor(mContext.resources.getColor(R.color.success_status))
+//                                    .negativeColor(mContext.resources.getColor(R.color.tip_text))
+//                                    .positiveText("确认")
+//                                    .negativeText("取消")
+//                                    .onPositive { _, _ ->
+//                                        notifyItemRemoved(helper.adapterPosition)
+//                                    }
+//                                    .show()
+//                        }
+//                    },
+//                    object : BottomMenuDialog.BootomListener {
+//                        override fun onClick(which: Int) {
+//                            var intent = Intent()
+//                            intent.setClass(mContext, TeachersDetailActivity::class.java)
+//                            intent.putExtra(ACTIVITYSTATUS, STATUS_EDIT)
+//                            intent.putExtra(CommonConstants.BEAN,item)
+//                            mContext.startActivity(intent)
+//                        }
+//                    }
+//            )
         }
 
     }

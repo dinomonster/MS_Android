@@ -144,12 +144,12 @@ public class UserEditPresenter extends BasePresenter implements UserEditContract
             mView.uploadImgSucess(bean.getImageUri());
             return;
         }
-        AliOSSUtils aliOSSUtils = new AliOSSUtils((Context) mView);
+        final AliOSSUtils aliOSSUtils = new AliOSSUtils((Context) mView);
         final String url = AccountHelper.getUser().getUserId() + "/" + System.currentTimeMillis() + "userimg.jpg";
         aliOSSUtils.upLoadImageViewCallBack(url, path, new OSSCompletedCallback<PutObjectRequest, PutObjectResult>() {
             @Override
             public void onSuccess(PutObjectRequest request, PutObjectResult result) {
-                mView.uploadImgSucess(url);
+                mView.uploadImgSucess(aliOSSUtils.getBaseUrl()+url);
             }
 
             @Override

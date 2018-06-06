@@ -193,12 +193,12 @@ public class CollegeRoomPresenter extends BasePresenter implements CollegeRoomCo
 
     @Override
     public void uploadImg(String path) {
-        AliOSSUtils aliOSSUtils = new AliOSSUtils((Context) mView);
+        final AliOSSUtils aliOSSUtils = new AliOSSUtils((Context) mView);
         final String url = AccountHelper.getUser().getUserId() + "/" + System.currentTimeMillis() + "userimg.jpg";
         aliOSSUtils.upLoadImageViewCallBack(url, path, new OSSCompletedCallback<PutObjectRequest, PutObjectResult>() {
             @Override
             public void onSuccess(PutObjectRequest request, PutObjectResult result) {
-                mView.uploadImgSucess(url);
+                mView.uploadImgSucess(aliOSSUtils.getBaseUrl()+url);
             }
 
             @Override

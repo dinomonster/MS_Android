@@ -36,7 +36,9 @@ public abstract class BaseActivity extends BaseSwipeBackActivity implements Swip
     public abstract int setViewId();
 
     // 初始化数据
-    public abstract void initData();
+    public void initData(){
+        dialogHelper = new DialogHelper(this);
+    }
 
     public void initRecyclerView() {
 

@@ -13,11 +13,17 @@ import java.util.List;
 public interface TagManagerContract {
     interface View extends MvpView {
         void showList(List<TagListBean.Lists> list);
+
         void showNetWorkError();
+
         void showNoData();
+
+        void addSuccess();
     }
 
     interface Presenter extends MvpPresenter {
         void getTagList(int pageNo, int type, String tagName);
+
+        void addTag(int type, String tagName);
     }
 }

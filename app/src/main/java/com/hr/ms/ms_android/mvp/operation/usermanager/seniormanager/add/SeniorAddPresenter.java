@@ -43,11 +43,11 @@ public class SeniorAddPresenter extends BasePresenter implements SeniorAddContra
     }
 
     @Override
-    public void setSenior(Integer accId, Integer seniorType, Integer seniorIdentity, Integer seniorField, String seniorTitle, String seniorIntro) {
+    public void setSenior(Integer accId, Integer seniorType, Integer seniorIdentity, Integer seniorField, String seniorTitle, String seniorIntro,String seniorImg,String seniorName) {
         String msg = PresenterUtils.INSTANCE.checkParamasNotNull(
                 true,
-                new String[]{"导师类型", "导师身份","研究领域", "个人头衔", "个人简介"},
-                seniorType, seniorIdentity,seniorField,seniorTitle,seniorIntro);
+                new String[]{"导师类型", "导师身份","研究领域", "个人头衔", "个人简介","头像","用户名"},
+                seniorType, seniorIdentity,seniorField,seniorTitle,seniorIntro,seniorImg,seniorName);
         if (msg != null) {
             mView.showToast(msg);
             return;
@@ -59,6 +59,8 @@ public class SeniorAddPresenter extends BasePresenter implements SeniorAddContra
         map.put("seniorField", seniorField);
         map.put("seniorTitle", seniorTitle);
         map.put("seniorIntro", seniorIntro);
+        map.put("seniorImg", seniorImg);
+        map.put("seniorName", seniorName);
         mView.showProgressDialog("开通导师...");
         Disposable disposable = repository.setSenior(map)
                 .subscribeOn(Schedulers.io())
@@ -99,12 +101,12 @@ public class SeniorAddPresenter extends BasePresenter implements SeniorAddContra
 
     @Override
     public void uploadImg(String path) {
-        AliOSSUtils aliOSSUtils = new AliOSSUtils((Context) mView);
+        final AliOSSUtils aliOSSUtils = new AliOSSUtils((Context) mView);
         final String url = AccountHelper.getUser().getUserId() + "/" + System.currentTimeMillis() + "userimg.jpg";
         aliOSSUtils.upLoadImageViewCallBack(url, path, new OSSCompletedCallback<PutObjectRequest, PutObjectResult>() {
             @Override
             public void onSuccess(PutObjectRequest request, PutObjectResult result) {
-                mView.uploadImgSucess(url);
+                mView.uploadImgSucess(aliOSSUtils.getBaseUrl()+url);
             }
 
             @Override

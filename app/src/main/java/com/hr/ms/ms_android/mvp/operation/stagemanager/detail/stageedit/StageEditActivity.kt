@@ -117,13 +117,6 @@ class StageEditActivity : BaseActivity(), View.OnClickListener, StageEditContrac
     }
 
     override fun editSucess() {
-        dialogHelper?.showChooseDialog("师兄在线（中山）驿站开通成功\n是否立即分配电子代言卡？", "下次分配", "立即分配", {
-            onBackPressed()
-        }, {
-            dialogHelper?.showCreateCard({ onBackPressed() }, {
-                presenter?.createECard(bean?.stageId, dialogHelper.dialog?.findViewById<EditText>(R.id.num_et)?.text?.toString())
-            })
-        })
     }
 
     override fun createECardSucess() {

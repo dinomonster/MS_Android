@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <View style="@style/line_style" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/sx_dp10"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sx_dp1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/sx_dp12"
+                android:paddingLeft="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp13"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/sx_sp16"
+                tools:text="主题：连锁经营的跨时代变迁" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/sx_dp10"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/sx_dp10">
+
+                <ImageView
+                    android:id="@+id/iv_image"
+                    android:layout_width="@dimen/sx_dp40"
+                    android:layout_height="@dimen/sx_dp40"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/sx_dp10"
+                    android:src="@drawable/default_head" />
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/sx_sp14"
+                    tools:text="邓地" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name_title_tv"
+                    style="@style/form_text_title_style"
+                    android:text="*承办方名称" />
+
+                <EditText
+                    android:id="@+id/name_et"
+                    style="@style/form_text_content_left_style" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/image_title_tv"
+                    style="@style/form_text_title_style"
+                    android:gravity="top"
+                    android:text="*承办方logo" />
+
+                <ImageView
+                    android:id="@+id/logo_iv"
+                    android:layout_width="@dimen/sx_dp60"
+                    android:layout_height="@dimen/sx_dp60"
+                    android:layout_marginBottom="@dimen/sx_dp10"
+                    android:layout_marginTop="@dimen/sx_dp10"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/chooseimg_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:paddingLeft="@dimen/sx_dp10"
+                    android:paddingRight="@dimen/sx_dp10"
+                    android:paddingTop="@dimen/sx_dp20">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="@dimen/sx_dp25"
+                        android:layout_height="@dimen/sx_dp20"
+                        android:tint="@android:color/black"
+                        app:srcCompat="@drawable/ic_icon_chooseimg" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/form_text_title_style"
+                    android:text="logo跳转URL" />
+
+                <EditText
+                    android:id="@+id/url_et"
+                    style="@style/form_text_content_left_style"
+                    android:hint="例如：www.baidu.com" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/freenum_title_tv"
+                    style="@style/form_text_title_style"
+                    android:text="*免费名额" />
+
+                <EditText
+                    android:id="@+id/freenum_et"
+                    style="@style/form_text_content_left_style"
+                    android:layout_weight="1"
+                    android:hint="免费报名限制名额，例如：10"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/form_text_content_left_style"
+                    android:layout_width="wrap_content"
+                    android:padding="0dp"
+                    android:text="人" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/action_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sx_dp50"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/save_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_green_selector"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.FitWindowsLinearLayout>

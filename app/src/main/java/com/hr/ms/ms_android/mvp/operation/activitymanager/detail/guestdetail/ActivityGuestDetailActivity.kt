@@ -75,31 +75,31 @@ class ActivityGuestDetailActivity : BaseActivity(), View.OnClickListener {
                 toolbar.setTitleContent("嘉宾详情")
                 toolbar.setMoreResource(R.drawable.ic_more_vertical)
                 toolbar.addOnMoreListener {
-                    BottomMenuDialog().showBottomDialog(
-                            this,
-                            arrayOf("删除","编辑"),
-                            object : BottomMenuDialog.BootomListener {
-                                override fun onClick(which: Int) {
-                                    MaterialDialog.Builder(context)
-                                            .title("提示")
-                                            .content("确认删除？")
-                                            .positiveColor(resources.getColor(R.color.success_status))
-                                            .negativeColor(resources.getColor(R.color.tip_text))
-                                            .positiveText("确认")
-                                            .negativeText("取消")
-                                            .onPositive { _, _ ->
-
-                                            }
-                                            .show()
-                                }
-                            },
-                            object : BottomMenuDialog.BootomListener {
-                                override fun onClick(which: Int) {
-                                    status = CommonConstants.STATUS_EDIT
-                                    initByStatus()
-                                }
-                            }
-                    )
+//                    BottomMenuDialog().showBottomDialog(
+//                            this,
+//                            arrayOf("删除","编辑"),
+//                            object : BottomMenuDialog.BootomListener {
+//                                override fun onClick(which: Int) {
+//                                    MaterialDialog.Builder(context)
+//                                            .title("提示")
+//                                            .content("确认删除？")
+//                                            .positiveColor(resources.getColor(R.color.success_status))
+//                                            .negativeColor(resources.getColor(R.color.tip_text))
+//                                            .positiveText("确认")
+//                                            .negativeText("取消")
+//                                            .onPositive { _, _ ->
+//
+//                                            }
+//                                            .show()
+//                                }
+//                            },
+//                            object : BottomMenuDialog.BootomListener {
+//                                override fun onClick(which: Int) {
+//                                    status = CommonConstants.STATUS_EDIT
+//                                    initByStatus()
+//                                }
+//                            }
+//                    )
                 }
             }
             CommonConstants.STATUS_EDIT->{//编辑状态

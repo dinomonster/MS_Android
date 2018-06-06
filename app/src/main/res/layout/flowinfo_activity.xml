@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <View style="@style/line_style" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingBottom="@dimen/sx_dp12"
+        android:paddingLeft="@dimen/sx_dp10"
+        android:paddingTop="@dimen/sx_dp13"
+        android:textColor="@color/title_text"
+        android:textSize="@dimen/sx_sp16"
+        tools:text="主题：连锁经营的跨时代变迁" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sx_dp10"
+            android:text="最少添加一个流程节点"
+            android:textColor="@color/tip_text"
+            android:textSize="@dimen/sx_sp12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/action_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sx_dp50"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/next_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_green_selector"
+            android:gravity="center"
+            android:text="完成线下活动创建"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.FitWindowsLinearLayout>

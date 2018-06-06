@@ -27,6 +27,24 @@
             android:layout_marginTop="@dimen/sx_dp1"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/form_text_title_style"
+                    android:text="&#8194;驿站站长" />
+
+                <TextView
+                    android:id="@+id/user_tv"
+                    style="@style/form_text_content_left_style"
+                    android:textColor="@color/content_text"
+                    tools:text="11111111111" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,24 +106,6 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/sx_dp1"
-                android:background="@android:color/white"
-                android:orientation="horizontal">
-
-                <TextView
-                    style="@style/form_text_title_style"
-                    android:text="&#8194;驿站站长" />
-
-                <TextView
-                    android:id="@+id/user_tv"
-                    style="@style/form_text_content_left_style"
-                    android:textColor="@color/content_text"
-                    tools:text="11111111111" />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -143,7 +143,7 @@
                     android:id="@+id/intro_et"
                     style="@style/form_text_content_left_style"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/sx_dp75"
+                    android:layout_height="@dimen/sx_dp95"
                     android:gravity="top"
                     android:lines="5"
                     tools:text="111sssssssssssssssssssssssssssssssssssssss11" />
@@ -163,10 +163,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white"
+            android:background="@drawable/button_red_selector"
             android:gravity="center"
             android:text="上一步"
-            android:textColor="@color/main_color"
+            android:textColor="@color/white"
             android:textSize="14sp" />
 
         <TextView
@@ -174,7 +174,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/button_brown_selector"
+            android:background="@drawable/button_green_selector"
             android:gravity="center"
             android:text="立即开通"
             android:textColor="@color/white"

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <View style="@style/line_style" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/sx_dp10"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sx_dp1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/sx_dp12"
+                android:paddingLeft="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp13"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/sx_sp16"
+                tools:text="主题：连锁经营的跨时代变迁" />
+
+            <LinearLayout
+                android:id="@+id/signup_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/signup_title_tv"
+                    style="@style/form_text_title_style"
+                    android:layout_height="wrap_content"
+                    android:text="*签到时间" />
+
+                <TextView
+                    android:id="@+id/signuptime_tv"
+                    style="@style/form_text_content_left_style"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="请选择" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    android:tint="@android:color/black"
+                    app:srcCompat="@drawable/icon_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/address_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/address_title_tv"
+                    style="@style/form_text_title_style"
+                    android:layout_height="wrap_content"
+                    android:text="*活动地址" />
+
+                <TextView
+                    android:id="@+id/address_tv"
+                    style="@style/form_text_content_left_style"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="请选择" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    android:tint="@android:color/black"
+                    app:srcCompat="@drawable/icon_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addressdetail_title_tv"
+                    style="@style/form_text_title_style"
+                    android:text="*详细地址" />
+
+                <EditText
+                    android:id="@+id/addressdetail_et"
+                    style="@style/form_text_content_left_style"
+                    android:hint="请输入详细地址信息" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/contacts_title_tv"
+                    style="@style/form_text_title_style"
+                    android:text="*联&#8194;系&#8194;人" />
+
+                <EditText
+                    android:id="@+id/contacts_et"
+                    style="@style/form_text_content_left_style"
+                    android:hint="活动联系人姓名" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/phone_title_tv"
+                    style="@style/form_text_title_style"
+                    android:text="*联系电话" />
+
+                <EditText
+                    android:id="@+id/phone_et"
+                    style="@style/form_text_content_left_style"
+                    android:hint="活动联系人电话"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/society_title_tv"
+                    style="@style/form_text_title_style"
+                    android:text="*社会名额" />
+
+                <EditText
+                    android:id="@+id/society_et"
+                    style="@style/form_text_content_left_style"
+                    android:layout_weight="1"
+                    android:hint="活动社会报名人数限制，例如：50"
+                    android:inputType="number" />
+
+                <EditText
+                    style="@style/form_text_content_left_style"
+                    android:layout_width="wrap_content"
+                    android:padding="0dp"
+                    android:text="人" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/form_text_title_style"
+                    android:text="社会名额已报" />
+
+                <TextView
+                    android:id="@+id/societyalreadysign_tv"
+                    style="@style/form_text_content_left_style"
+                    android:inputType="number"
+                    android:paddingLeft="0dp"
+                    tools:text="99人" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/student_title_tv"
+                    style="@style/form_text_title_style"
+                    android:text="*学生名额" />
+
+                <EditText
+                    android:id="@+id/student_et"
+                    style="@style/form_text_content_left_style"
+                    android:layout_weight="1"
+                    android:hint="活动学生报名人数限制，例如：50"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/form_text_content_left_style"
+                    android:layout_width="wrap_content"
+                    android:padding="0dp"
+                    android:text="人" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp10"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/form_text_title_style"
+                    android:text="学生名额已报" />
+
+                <TextView
+                    android:id="@+id/studentalreadysign_tv"
+                    style="@style/form_text_content_left_style"
+                    android:inputType="number"
+                    android:paddingLeft="0dp"
+                    tools:text="99人" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/price_title_tv"
+                    style="@style/form_text_title_style"
+                    android:text="*报名费用" />
+
+                <TextView
+                    style="@style/form_text_content_left_style"
+                    android:layout_width="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:padding="0dp"
+                    android:text="￥" />
+
+                <EditText
+                    android:id="@+id/price_et"
+                    style="@style/form_text_content_left_style"
+                    android:layout_weight="1"
+                    android:hint="例如：50"
+                    android:inputType="numberDecimal" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/action_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sx_dp50"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/next_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_green_selector"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.FitWindowsLinearLayout>

@@ -6,7 +6,6 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.text.SpannableString
 import android.text.Spanned
-import android.text.TextUtils
 import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.EditText
@@ -23,6 +22,7 @@ import com.hr.ms.ms_android.data.AccountHelper
 import com.hr.ms.ms_android.data.local.ServiceLocalDataSource
 import com.hr.ms.ms_android.data.remote.ServiceRemoteDataSource
 import com.hr.ms.ms_android.data.repository.ServiceRepository
+import com.hr.ms.ms_android.utils.CodeStringUtils
 import com.hr.ms.ms_android.utils.GetImageUtils
 import com.hr.ms.ms_android.utils.ViewUtils
 import com.hr.ms.ms_android.widget.GetImageDialog
@@ -37,6 +37,7 @@ class StageAddActivity : BaseActivity(), View.OnClickListener, StageAddContract.
     private var getImageDialog: GetImageDialog? = null
     private var imageUtils: GetImageUtils? = null
 
+    private var type: Int? = null
     private var localImgPath: String? = ""
     private var imageurl: String? = ""
     private var isUploading: Boolean = false
@@ -55,7 +56,13 @@ class StageAddActivity : BaseActivity(), View.OnClickListener, StageAddContract.
         toolbar.setTitleContent("驿站资料")
         presenter = StageAddPresenter(this, ServiceRepository.getInstance(ServiceRemoteDataSource.getInstance(), ServiceLocalDataSource.getInstance()))
         userBean = intent.getParcelableExtra(CommonConstants.BEAN)
+        type = intent.getIntExtra(CommonConstants.TYPE, -1)
         user_tv.text = userBean?.userName
+        imageurl = userBean?.userImg
+        if (type == CodeStringUtils.stageCodeArry[0]) {//创建个人驿站时，应默认使用用户头像,但可编辑
+            imageurl = userBean?.userImg
+            ImageLoadUtils.loadCropCircleImage(this, userBean?.userImg, image_iv)
+        }
         ViewUtils.setOnClickListeners(this, pre_tv, sub_tv, chooseimg_ll)
         setSpan(image_title_tv, name_title_tv, city_title_tv, intro_title_tv)
 
@@ -92,11 +99,11 @@ class StageAddActivity : BaseActivity(), View.OnClickListener, StageAddContract.
                 onBackPressed()
             }
             sub_tv -> {
-                if (isUploading && TextUtils.isEmpty(imageurl)) {
+                if (isUploading) {
                     showToast("图片上传中...")
                     return
                 }
-                presenter?.addStage(userBean?.userId, intent.getIntExtra(CommonConstants.TYPE, -1))
+                presenter?.addStage(userBean?.userId, type)
             }
         }
     }
@@ -107,14 +114,15 @@ class StageAddActivity : BaseActivity(), View.OnClickListener, StageAddContract.
     }
 
     override fun uploadImgSucess(url: String?) {
+        isUploading = false
         imageurl = url
     }
 
     override fun editSucess() {
-        dialogHelper?.showChooseDialog("师兄在线（中山）驿站开通成功\n是否立即分配电子代言卡？","下次分配","立即分配",{
+        dialogHelper?.showChooseDialog("师兄在线（中山）驿站开通成功\n是否立即分配电子代言卡？", "下次分配", "立即分配", {
             onBackPressed()
         }, {
-            dialogHelper?.showCreateCard({ onBackPressed() }, {
+            dialogHelper?.showCreateCard({ dialogHelper?.dismissProgressDialog() }, {
                 presenter?.createECard(AccountHelper.getUser().userId, addStageResponseBean?.stageCode, dialogHelper.dialog?.findViewById<EditText>(R.id.num_et)?.text?.toString())
             })
         })

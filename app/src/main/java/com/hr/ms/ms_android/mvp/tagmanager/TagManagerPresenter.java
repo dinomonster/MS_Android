@@ -73,4 +73,46 @@ public class TagManagerPresenter extends BasePresenter implements TagManagerCont
                 });
         disposables.add(disposable);
     }
+
+    @Override
+    public void addTag(int type, String tagName) {
+        Map<String,Object> map = new HashMap();
+        map.put("tagName", tagName);
+        map.put("type", type);
+        mView.showProgressDialog("添加标签...");
+        Disposable disposable = repository.addTag(map)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(new DisposableObserver<BaseResponseReturnValue>() {
+                    @Override
+                    public void onNext(BaseResponseReturnValue value) {
+                        KLog.e(new Gson().toJson(value));
+                        mView.dismissProgressDialog();
+                        switch (value.getCode()) {
+                            case ResponseCode.SUCCESS_CODE:
+                                mView.showToast("添加成功");
+                                mView.addSuccess();
+                                break;
+
+                            default:
+                                mView.showNetWorkError();
+//                                mView.showToast(value.getStatus());
+                                break;
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        e.printStackTrace();
+                        mView.dismissProgressDialog();
+                        mView.showNetWorkError();
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+        disposables.add(disposable);
+    }
 }

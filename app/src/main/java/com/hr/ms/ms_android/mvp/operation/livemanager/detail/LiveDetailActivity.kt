@@ -91,24 +91,24 @@ class LiveDetailActivity : BaseActivity(), View.OnClickListener {
                 ViewUtils.setTextHint("输入",title_et,themeName_et,url_et,watchnum_et,ordercount_et)
                 toolbar.setMoreResource(R.drawable.ic_more_vertical)
                 toolbar.addOnMoreListener {
-                    BottomMenuDialog().showBottomDialog(
-                            this,
-                            arrayOf("编辑详情","添加嘉宾"),
-                            object : BottomMenuDialog.BootomListener {
-                                override fun onClick(which: Int) {
-                                    status = CommonConstants.STATUS_EDIT
-                                    initByStatus()
-                                }
-                            },
-                            object : BottomMenuDialog.BootomListener {
-                                override fun onClick(which: Int) {
-                                    var intent = Intent()
-                                    intent.setClass(context, ActivityGuestDetailActivity::class.java)
-                                    intent.putExtra(CommonConstants.ACTIVITYSTATUS, CommonConstants.STATUS_ADD)
-                                    startActivity(intent)
-                                }
-                            }
-                    )
+//                    BottomMenuDialog().showBottomDialog(
+//                            this,
+//                            arrayOf("编辑详情","添加嘉宾"),
+//                            object : BottomMenuDialog.BootomListener {
+//                                override fun onClick(which: Int) {
+//                                    status = CommonConstants.STATUS_EDIT
+//                                    initByStatus()
+//                                }
+//                            },
+//                            object : BottomMenuDialog.BootomListener {
+//                                override fun onClick(which: Int) {
+//                                    var intent = Intent()
+//                                    intent.setClass(context, ActivityGuestDetailActivity::class.java)
+//                                    intent.putExtra(CommonConstants.ACTIVITYSTATUS, CommonConstants.STATUS_ADD)
+//                                    startActivity(intent)
+//                                }
+//                            }
+//                    )
                 }
             }
             CommonConstants.STATUS_EDIT->{//编辑状态

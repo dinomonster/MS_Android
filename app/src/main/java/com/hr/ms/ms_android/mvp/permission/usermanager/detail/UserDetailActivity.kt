@@ -51,36 +51,36 @@ class UserDetailActivity : BaseActivity() {
                 toolbar.setTitleContent("用户详情")
                 toolbar.setMoreResource(R.drawable.ic_more_vertical)
                 toolbar.addOnMoreListener {
-                    BottomMenuDialog().showBottomDialog(
-                            this,
-                            arrayOf("删除","编辑","重置密码"),
-                            object : BottomMenuDialog.BootomListener {
-                                override fun onClick(which: Int) {
-                                    MaterialDialog.Builder(context)
-                                            .title("提示")
-                                            .content("确认删除？")
-                                            .positiveColor(resources.getColor(R.color.success_status))
-                                            .negativeColor(resources.getColor(R.color.tip_text))
-                                            .positiveText("确认")
-                                            .negativeText("取消")
-                                            .onPositive { _, _ ->
-
-                                            }
-                                            .show()
-                                }
-                            },
-                            object : BottomMenuDialog.BootomListener {
-                                override fun onClick(which: Int) {
-                                    status = CommonConstants.STATUS_EDIT
-                                    initByStatus()
-                                }
-                            },
-                            object : BottomMenuDialog.BootomListener {
-                                override fun onClick(which: Int) {
-
-                                }
-                            }
-                    )
+//                    BottomMenuDialog().showBottomDialog(
+//                            this,
+//                            arrayOf("删除","编辑","重置密码"),
+//                            object : BottomMenuDialog.BootomListener {
+//                                override fun onClick(which: Int) {
+//                                    MaterialDialog.Builder(context)
+//                                            .title("提示")
+//                                            .content("确认删除？")
+//                                            .positiveColor(resources.getColor(R.color.success_status))
+//                                            .negativeColor(resources.getColor(R.color.tip_text))
+//                                            .positiveText("确认")
+//                                            .negativeText("取消")
+//                                            .onPositive { _, _ ->
+//
+//                                            }
+//                                            .show()
+//                                }
+//                            },
+//                            object : BottomMenuDialog.BootomListener {
+//                                override fun onClick(which: Int) {
+//                                    status = CommonConstants.STATUS_EDIT
+//                                    initByStatus()
+//                                }
+//                            },
+//                            object : BottomMenuDialog.BootomListener {
+//                                override fun onClick(which: Int) {
+//
+//                                }
+//                            }
+//                    )
                 }
                 role_ll.setOnClickListener { nextActivity(RoleCheckActivity::class.java) }
             }

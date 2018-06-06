@@ -5,11 +5,14 @@ import com.hr.ms.ms_android.bean.AddStageResponseBean;
 import com.hr.ms.ms_android.bean.AgentOrScholarBean;
 import com.hr.ms.ms_android.bean.AliOSSBean;
 import com.hr.ms.ms_android.bean.BaseResponseReturnValue;
+import com.hr.ms.ms_android.bean.CardActiveDetailBean;
 import com.hr.ms.ms_android.bean.CollegeRoomDetailBean;
 import com.hr.ms.ms_android.bean.CollegeRoomListBean;
 import com.hr.ms.ms_android.bean.CourseListBean;
 import com.hr.ms.ms_android.bean.IdentityBeanList;
 import com.hr.ms.ms_android.bean.LoginUserBean;
+import com.hr.ms.ms_android.bean.OfficialEventDetailBean;
+import com.hr.ms.ms_android.bean.OfficialEventListBean;
 import com.hr.ms.ms_android.bean.SeniorListBean;
 import com.hr.ms.ms_android.bean.StageDetailBean;
 import com.hr.ms.ms_android.bean.StageListBean;
@@ -53,13 +56,22 @@ public interface ServiceDataApi {
     Observable<BaseResponseReturnValue<AliOSSBean>> getUploadAuth(@QueryMap Map<String, Object> map);
 
     /**
-     * 标签
+     * 标签列表
      *
      * @param map
      * @return
      */
     @POST("api/tag/getTagList")
     Observable<BaseResponseReturnValue<TagListBean>> getTagList(@QueryMap Map<String, Object> map);
+
+    /**
+     * 新增标签
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/tag/addTag")
+    Observable<BaseResponseReturnValue> addTag(@QueryMap Map<String, Object> map);
 
     /**
      * 运营管理-用户列表
@@ -317,7 +329,7 @@ public interface ServiceDataApi {
     Observable<BaseResponseReturnValue<StageListBean>> getStageIndexList(@QueryMap Map<String, Object> map);
 
     /**
-     * 运营管理-驿站管理-驿站列表
+     * 运营管理-驿站管理-驿站详情
      *
      * @param map
      * @return
@@ -360,5 +372,194 @@ public interface ServiceDataApi {
      */
     @POST("api/stage/addStage")
     Observable<BaseResponseReturnValue<AddStageResponseBean>> addStage(@QueryMap Map<String, Object> map);
+
+    /**
+     * 运营管理-驿站管理-已激活卡片详情
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/stage/getCardActiveDetail")
+    Observable<BaseResponseReturnValue<CardActiveDetailBean>> getCardActiveDetail(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-官方活动列表
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/getOfficialEventList")
+    Observable<BaseResponseReturnValue<OfficialEventListBean>> getOfficialEventList(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-官方活动详情
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/getOfficialEventDetail")
+    Observable<BaseResponseReturnValue<OfficialEventDetailBean>> getOfficialEventDetail(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-创建活动基本信息
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/addOfficialEvent")
+    Observable<BaseResponseReturnValue> addOfficialEvent(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-添加官方活动赞助商
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/addEventSponor")
+    Observable<BaseResponseReturnValue> addEventSponor(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-创建官方活动线下报名信息
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/addEventOfflineInfo")
+    Observable<BaseResponseReturnValue> addEventOfflineInfo(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-创建官方直播信息
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/addEventLiveInfo")
+    Observable<BaseResponseReturnValue> addEventLiveInfo(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-直播信息编辑
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/editEventLiveInfo")
+    Observable<BaseResponseReturnValue> editEventLiveInfo(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-添加官方活动直播聊天室管理员
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/addEventImManager")
+    Observable<BaseResponseReturnValue> addEventImManager(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-聊天室管理员信息编辑
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/editEventImManager")
+    Observable<BaseResponseReturnValue> editEventImManager(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-创建活动流程节点
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/addEventFlowPoints")
+    Observable<BaseResponseReturnValue> addEventFlowPoints(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-添加官方活动承办方
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/addEventCoorganizer")
+    Observable<BaseResponseReturnValue> addEventCoorganizer(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-编辑线下报名信息
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/editEventOfflineInfo")
+    Observable<BaseResponseReturnValue> editEventOfflineInfo(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-编辑活动基本信息
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/editOfficialEvent")
+    Observable<BaseResponseReturnValue> editOfficialEvent(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-删除聊天室管理员
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/deleteImManagerInfo")
+    Observable<BaseResponseReturnValue> deleteImManagerInfo(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-删除活动流程节点
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/deleteFlowPoints")
+    Observable<BaseResponseReturnValue> deleteFlowPoints(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-删除活动流程节点
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/editEventFlowPoints")
+    Observable<BaseResponseReturnValue> editEventFlowPoints(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-删除赞助商信息
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/deleteEventSponorInfo")
+    Observable<BaseResponseReturnValue> deleteEventSponorInfo(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-添加官方活动赞助商
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/editEventSponorInfo")
+    Observable<BaseResponseReturnValue> editEventSponorInfo(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-删除承办方
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/deleteEventCoorganizer")
+    Observable<BaseResponseReturnValue> deleteEventCoorganizer(@QueryMap Map<String, Object> map);
+
+    /**
+     * 资源管理-官方活动管理-删除承办方
+     *
+     * @param map
+     * @return
+     */
+    @POST("api/officialEvent/editEventCoorganizer")
+    Observable<BaseResponseReturnValue> editEventCoorganizer(@QueryMap Map<String, Object> map);
 
 }

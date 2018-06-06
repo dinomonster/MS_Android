@@ -5,9 +5,11 @@ import android.content.Intent
 import android.graphics.Color
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.GridLayoutManager
+import android.widget.EditText
 import com.better.appbase.mvp.MvpPresenter
 import com.hr.ms.ms_android.R
 import com.hr.ms.ms_android.base.BaseActivity
+import com.hr.ms.ms_android.bean.InputDialogBean
 import com.hr.ms.ms_android.bean.TagListBean
 import com.hr.ms.ms_android.constants.CommonConstants
 import com.hr.ms.ms_android.data.local.ServiceLocalDataSource
@@ -19,7 +21,7 @@ import kotlinx.android.synthetic.main.toolbar_layout.*
 
 
 class TagManagerActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener, TagManagerContract.View {
-    private lateinit var presenter: TagManagerPresenter
+    private var presenter: TagManagerPresenter? = null
     private var selectPos: Int = -1
 
     private lateinit var adapter: TagManagerAdapter
@@ -37,6 +39,7 @@ class TagManagerActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener,
     }
 
     override fun initData() {
+        super.initData()
         presenter = TagManagerPresenter(this, ServiceRepository.getInstance(ServiceRemoteDataSource.getInstance(), ServiceLocalDataSource.getInstance()))
         type = intent.getIntExtra(CommonConstants.TYPE, 0)
         toolbar.addOnBackListener { onBackPressed() }
@@ -50,6 +53,14 @@ class TagManagerActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener,
         }
         toolbar.setMoreTitleContent("添加")
         toolbar.setBackTitleContent("取消")
+        toolbar.addOnMoreListener {
+            dialogHelper?.showInputDialog(InputDialogBean("添加标签", "名称", "", "", "取消", "添加"), {
+                dialogHelper?.dismissProgressDialog()
+            }, {
+                dialogHelper?.dismissProgressDialog()
+                presenter?.addTag(type, dialogHelper.dialog?.findViewById<EditText>(R.id.input_et)?.text?.toString())
+            })
+        }
 
         refreshLayout.setColorSchemeColors(Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW)
         refreshLayout.setOnRefreshListener(this)
@@ -71,10 +82,14 @@ class TagManagerActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener,
                 intent.putExtra(CommonConstants.BEAN, adapter.data[selectPos] as TagListBean.Lists)
                 setResult(Activity.RESULT_OK, intent)
                 onBackPressed()
-            }else {
+            } else {
                 showToast("请选择标签")
             }
         }
+    }
+
+    override fun addSuccess() {
+        onRefresh()
     }
 
     override fun onResume() {
@@ -89,7 +104,7 @@ class TagManagerActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener,
     }
 
     private fun getData() {
-        presenter.getTagList(pageNo, type, "")
+        presenter?.getTagList(pageNo, type, "")
     }
 
     override fun showList(list: MutableList<TagListBean.Lists>?) {
@@ -99,7 +114,7 @@ class TagManagerActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener,
 
     override fun showNetWorkError() {
         refreshLayout.isRefreshing = false
-        adapter.showNetWorkErrorView({onRefresh()})
+        adapter.showNetWorkErrorView({ onRefresh() })
     }
 
     override fun showNoData() {

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:padding="@dimen/sx_dp10">
+
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="@dimen/sx_dp40"
+            android:layout_height="@dimen/sx_dp40"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="@dimen/sx_dp10"
+            android:src="@drawable/default_head" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/sx_sp14"
+                tools:text="邓地ssssssssssssssssssssssssssssss" />
+
+            <TextView
+                android:id="@+id/scholar_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sx_dp10"
+                android:background="@drawable/shape_rect_f19149"
+                android:visibility="gone"
+                android:padding="@dimen/sx_dp2"
+                android:text="学霸"
+                android:textColor="@color/color_f19149"
+                android:textSize="@dimen/sx_sp10" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sx_dp10"
+            android:textColor="@color/content_text"
+            android:textSize="@dimen/sx_sp12"
+            tools:text="激活时间：2018-05-10" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/sx_dp15"
+        android:layout_marginRight="@dimen/sx_dp15"
+        android:background="@color/line" />
+</LinearLayout>
+

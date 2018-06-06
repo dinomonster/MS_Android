@@ -200,29 +200,35 @@ public class TimeUtils {
      * @return 时间字符串
      */
     public static String milliseconds2String(Long milliseconds) {
-        return milliseconds2String(milliseconds == null ? 0 : milliseconds, DEFAULT_SDF);
+        if (milliseconds == null) return "";
+        return milliseconds2String(milliseconds, DEFAULT_SDF);
     }
 
     public static String milliseconds2String2(Long milliseconds) {
-        return milliseconds2String(milliseconds == null ? 0 : milliseconds, DEFAULT_SDF2);
+        if (milliseconds == null) return "";
+        return milliseconds2String(milliseconds, DEFAULT_SDF2);
     }
 
     public static String milliseconds2String3(Long milliseconds) {
-        return milliseconds2String(milliseconds == null ? 0 : milliseconds, DEFAULT_SDF3);
+        if (milliseconds == null) return "";
+        return milliseconds2String(milliseconds, DEFAULT_SDF3);
     }
 
 
     public static String milliseconds2String4(Long milliseconds) {
-        return milliseconds2String(milliseconds == null ? 0 : milliseconds, DEFAULT_SDF4);
+        if (milliseconds == null) return "";
+        return milliseconds2String(milliseconds, DEFAULT_SDF4);
     }
 
 
     public static String milliseconds2String5(Long milliseconds) {
-        return milliseconds2String(milliseconds == null ? 0 : milliseconds, DEFAULT_SDF5);
+        if (milliseconds == null) return "";
+        return milliseconds2String(milliseconds, DEFAULT_SDF5);
     }
 
     public static String milliseconds2String6(Long milliseconds) {
-        return milliseconds2String(milliseconds == null ? 0 : milliseconds, DEFAULT_SDF6);
+        if (milliseconds == null) return "";
+        return milliseconds2String(milliseconds, DEFAULT_SDF6);
     }
 
 

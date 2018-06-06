@@ -1,6 +1,5 @@
 package com.hr.ms.ms_android.mvp.operation.usermanager.seniormanager
 
-import android.content.Intent
 import android.graphics.Color
 import android.support.v4.widget.SwipeRefreshLayout
 import android.view.View
@@ -9,14 +8,10 @@ import com.better.appbase.mvp.MvpPresenter
 import com.hr.ms.ms_android.R
 import com.hr.ms.ms_android.base.BaseActivity
 import com.hr.ms.ms_android.bean.SeniorListBean
-import com.hr.ms.ms_android.bean.WithdrawCashBean
-import com.hr.ms.ms_android.constants.CommonConstants
 import com.hr.ms.ms_android.data.local.ServiceLocalDataSource
 import com.hr.ms.ms_android.data.remote.ServiceRemoteDataSource
 import com.hr.ms.ms_android.data.repository.ServiceRepository
 import com.hr.ms.ms_android.mvp.operation.usermanager.seniormanager.chooseusernext.SeniorChooseUserActivity
-import com.hr.ms.ms_android.mvp.operation.withdrawmanager.detail.WithdrawCheckActivity
-import com.hr.ms.ms_android.mvp.operation.withdrawmanager.detail.WithdrawDetailActivity
 import com.hr.ms.ms_android.utils.CodeStringUtils.userIdentityTypeCode
 import com.hr.ms.ms_android.utils.CodeStringUtils.userIdentityTypeString
 import com.hr.ms.ms_android.widget.ListDropDownAdapter
@@ -55,10 +50,10 @@ class SeniorManagerActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListen
         adapter = SeniorManagerAdapter(recyclerView)
         recyclerView.adapter = adapter
         adapter.setOnItemClickListener { adapter, view, position ->
-            var bean = adapter.data[position] as WithdrawCashBean
-            var intent = Intent(this, if (bean.needCheckStatus == 1) WithdrawCheckActivity::class.java else WithdrawDetailActivity::class.java)
-            intent.putExtra(CommonConstants.ID, bean.orderNo)
-            startActivity(intent)
+//            var bean = adapter.data[position] as WithdrawCashBean
+//            var intent = Intent(this, if (bean.needCheckStatus == 1) WithdrawCheckActivity::class.java else WithdrawDetailActivity::class.java)
+//            intent.putExtra(CommonConstants.ID, bean.orderNo)
+//            startActivity(intent)
         }
         adapter.setOnLoadMoreListener({
             pageNo++

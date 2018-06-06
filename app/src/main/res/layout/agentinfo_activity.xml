@@ -81,20 +81,10 @@
                     android:layout_weight="1"
                     tools:text="100张" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical">
-
-                    <android.support.v7.widget.AppCompatImageView
-                        android:layout_width="@dimen/sx_dp18"
-                        android:layout_height="@dimen/sx_dp18"
-                        android:tint="@android:color/black"
-                        app:srcCompat="@drawable/icon_arrow" />
-                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/activitycard_ll"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/sx_dp1"

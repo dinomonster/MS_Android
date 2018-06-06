@@ -5,11 +5,14 @@ import com.hr.ms.ms_android.bean.AddStageResponseBean;
 import com.hr.ms.ms_android.bean.AgentOrScholarBean;
 import com.hr.ms.ms_android.bean.AliOSSBean;
 import com.hr.ms.ms_android.bean.BaseResponseReturnValue;
+import com.hr.ms.ms_android.bean.CardActiveDetailBean;
 import com.hr.ms.ms_android.bean.CollegeRoomDetailBean;
 import com.hr.ms.ms_android.bean.CollegeRoomListBean;
 import com.hr.ms.ms_android.bean.CourseListBean;
 import com.hr.ms.ms_android.bean.IdentityBeanList;
 import com.hr.ms.ms_android.bean.LoginUserBean;
+import com.hr.ms.ms_android.bean.OfficialEventDetailBean;
+import com.hr.ms.ms_android.bean.OfficialEventListBean;
 import com.hr.ms.ms_android.bean.SeniorListBean;
 import com.hr.ms.ms_android.bean.StageDetailBean;
 import com.hr.ms.ms_android.bean.StageListBean;
@@ -64,6 +67,11 @@ public class ServiceLocalDataSource implements ServiceDataApi {
 
     @Override
     public Observable<BaseResponseReturnValue<TagListBean>> getTagList(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> addTag(Map<String, Object> map) {
         return null;
     }
 
@@ -214,6 +222,111 @@ public class ServiceLocalDataSource implements ServiceDataApi {
 
     @Override
     public Observable<BaseResponseReturnValue<AddStageResponseBean>> addStage(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue<CardActiveDetailBean>> getCardActiveDetail(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue<OfficialEventListBean>> getOfficialEventList(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue<OfficialEventDetailBean>> getOfficialEventDetail(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> addOfficialEvent(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> addEventSponor(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> addEventOfflineInfo(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> addEventLiveInfo(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> editEventLiveInfo(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> addEventImManager(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> editEventImManager(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> addEventFlowPoints(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> addEventCoorganizer(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> editEventOfflineInfo(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> editOfficialEvent(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> deleteImManagerInfo(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> deleteFlowPoints(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> editEventFlowPoints(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> deleteEventSponorInfo(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> editEventSponorInfo(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> deleteEventCoorganizer(Map<String, Object> map) {
+        return null;
+    }
+
+    @Override
+    public Observable<BaseResponseReturnValue> editEventCoorganizer(Map<String, Object> map) {
         return null;
     }
 

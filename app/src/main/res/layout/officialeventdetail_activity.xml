@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <View style="@style/line_style" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/sx_dp10"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sx_dp1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sx_dp8"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_iv"
+                    android:layout_width="@dimen/sx_dp90"
+                    android:layout_height="@dimen/sx_dp120"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/default_back" />
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp10"
+                    android:layout_marginTop="@dimen/sx_dp10"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/sx_sp11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/title_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/sx_dp19"
+                android:paddingLeft="@dimen/sx_dp10"
+                android:paddingRight="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp19">
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="连锁经营的跨时代变迁"
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/sx_sp16" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    app:srcCompat="@drawable/icon_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp10"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/sx_dp19"
+                android:paddingLeft="@dimen/sx_dp10"
+                android:paddingRight="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp19">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp10"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:padding="0dp"
+                        android:text="开始时间" />
+
+                    <TextView
+                        android:id="@+id/starttime_tv"
+                        style="@style/form_text_content_left_style"
+                        android:padding="0dp"
+                        tools:text="2018-05-31 09:30" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp10"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:padding="0dp"
+                        android:text="结束时间" />
+
+                    <TextView
+                        android:id="@+id/endtiem_tv"
+                        style="@style/form_text_content_left_style"
+                        android:padding="0dp"
+                        tools:text="2018-05-31 09:30" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sx_dp10"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/form_text_title_style"
+                        android:padding="0dp"
+                        android:text="温馨提示" />
+
+                    <TextView
+                        android:id="@+id/tip_tv"
+                        style="@style/form_text_content_left_style"
+                        android:padding="0dp"
+                        tools:text="一旦报名活动费用不予退还" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contetnt_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sx_dp75"
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/sx_sp12"
+                    tools:text="时代变迁，商界人才辈出。有这么一群人，他们用连锁模式成就事业，又在实践经营中，为连锁这门学科赋予了新的理念。
+80年代初，在中西方文化碰撞下成长的王大东率先带领肯德基走进中国，在北京开设全国第一家连锁快餐店；90年代初，彼时大学刚毕业的何枫正式投身餐饮事业，随后参与包括永和大王、大快活、座银soba等快餐品牌的发展开拓工作。21世纪，从开办“一元擦鞋店”起步的辛玉波，引入当时国际先进的特许经营模式，开辟了擦鞋服务的连锁事业；与此同时，互联网购物悄然兴起，首批淘宝店主王洋赚得第一桶金，其后任职好孩子集团，投身连锁零售的消费升级研究。
+而在学术领域，曾于澳门大学任教13年的张荣显博士重新定义了网络大数据分析方法，受到各界肯定；我国首批连锁经营研究专家肖永添教授，集“商-导-研-战”于一体，闯荡商海三十余载。
+4月29日，上述六位企业家与教授将亲临师兄在线公开课现场，与你系统分享连锁经营的实践案例，一同回顾连锁经营的跨时代变迁。" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/flow_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/sx_dp19"
+                android:paddingLeft="@dimen/sx_dp10"
+                android:paddingRight="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp19">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="活动流程"
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/sx_sp16" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/flow_point"
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    android:layout_marginRight="@dimen/sx_dp3"
+                    app:srcCompat="@drawable/ic_icon_point" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    app:srcCompat="@drawable/icon_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/signup_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/sx_dp19"
+                android:paddingLeft="@dimen/sx_dp10"
+                android:paddingRight="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp19">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="报名信息"
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/sx_sp16" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/signup_point"
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    android:layout_marginRight="@dimen/sx_dp3"
+                    app:srcCompat="@drawable/ic_icon_point" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    app:srcCompat="@drawable/icon_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/live_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/sx_dp19"
+                android:paddingLeft="@dimen/sx_dp10"
+                android:paddingRight="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp19">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="直播信息"
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/sx_sp16" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/live_point"
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    android:layout_marginRight="@dimen/sx_dp3"
+                    app:srcCompat="@drawable/ic_icon_point" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    app:srcCompat="@drawable/icon_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sponsor_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/sx_dp19"
+                android:paddingLeft="@dimen/sx_dp10"
+                android:paddingRight="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp19">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="活动赞助商信息"
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/sx_sp16" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/sponsor_point"
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    android:layout_marginRight="@dimen/sx_dp3"
+                    app:srcCompat="@drawable/ic_icon_point" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    app:srcCompat="@drawable/icon_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/undertaker_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sx_dp1"
+                android:background="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/sx_dp19"
+                android:paddingLeft="@dimen/sx_dp10"
+                android:paddingRight="@dimen/sx_dp10"
+                android:paddingTop="@dimen/sx_dp19">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="活动承办方信息"
+                    android:textColor="@color/title_text"
+                    android:textSize="@dimen/sx_sp16" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/undertaker_point"
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    android:layout_marginRight="@dimen/sx_dp3"
+                    app:srcCompat="@drawable/ic_icon_point" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/sx_dp18"
+                    android:layout_height="@dimen/sx_dp18"
+                    app:srcCompat="@drawable/icon_arrow" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.v7.widget.FitWindowsLinearLayout>

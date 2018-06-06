@@ -9,7 +9,6 @@ import com.hr.ms.ms_android.R
 import com.hr.ms.ms_android.base.BaseAppCompatFragment
 import com.hr.ms.ms_android.bean.StageListBean
 import com.hr.ms.ms_android.constants.CommonConstants
-import com.hr.ms.ms_android.data.AccountHelper
 import com.hr.ms.ms_android.data.local.ServiceLocalDataSource
 import com.hr.ms.ms_android.data.remote.ServiceRemoteDataSource
 import com.hr.ms.ms_android.data.repository.ServiceRepository
@@ -45,7 +44,7 @@ class StageFragment : BaseAppCompatFragment(), SwipeRefreshLayout.OnRefreshListe
         adapter = StageAdapter(recyclerView)
         recyclerView.adapter = adapter
         adapter.setOnItemClickListener { adapter, view, position ->
-                        var intent = Intent(context, StageDetailActivity::class.java)
+            var intent = Intent(context, StageDetailActivity::class.java)
             intent.putExtra(CommonConstants.BEAN, adapter.data[position] as StageListBean.Lists)
             startActivity(intent)
         }
@@ -53,8 +52,8 @@ class StageFragment : BaseAppCompatFragment(), SwipeRefreshLayout.OnRefreshListe
             var bean = adapter.data[position] as StageListBean.Lists
             when (view.id) {
                 R.id.allocation_tv -> {
-                    dialogHelper?.showCreateCard({},{
-                        presenter?.createECard(bean?.stageId,dialogHelper.dialog?.findViewById<EditText>(R.id.num_et)?.text?.toString())
+                    dialogHelper?.showCreateCard({ dialogHelper?.dismissProgressDialog() }, {
+                        presenter?.createECard(bean?.stageId, dialogHelper.dialog?.findViewById<EditText>(R.id.num_et)?.text?.toString())
                     })
                 }
             }
@@ -66,8 +65,8 @@ class StageFragment : BaseAppCompatFragment(), SwipeRefreshLayout.OnRefreshListe
 
         fab_add.setOnClickListener {
             var intent = Intent(context, StageChooseUserActivity::class.java)
-            intent.putExtra(CommonConstants.PARAMS,arguments?.getInt(CommonConstants.TYPE) )
-            intent.putExtra(CommonConstants.TYPE,arguments?.getInt(CommonConstants.TYPE) )
+            intent.putExtra(CommonConstants.PARAMS, arguments?.getInt(CommonConstants.TYPE))
+            intent.putExtra(CommonConstants.TYPE, arguments?.getInt(CommonConstants.TYPE))
             startActivity(intent)
         }
         onRefresh()
@@ -95,7 +94,7 @@ class StageFragment : BaseAppCompatFragment(), SwipeRefreshLayout.OnRefreshListe
 
     override fun showNetWorkError() {
         refreshLayout.isRefreshing = false
-        adapter.showNetWorkErrorView({onRefresh()})
+        adapter.showNetWorkErrorView({ onRefresh() })
     }
 
     override fun showNoData() {
@@ -103,7 +102,7 @@ class StageFragment : BaseAppCompatFragment(), SwipeRefreshLayout.OnRefreshListe
         adapter.showNoDataView()
     }
 
-    fun setkey(key:String?){
+    fun setkey(key: String?) {
         searchKey = key
         onRefresh()
     }

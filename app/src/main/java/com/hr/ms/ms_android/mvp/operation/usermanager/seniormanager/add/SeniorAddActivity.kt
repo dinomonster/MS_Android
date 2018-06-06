@@ -7,7 +7,6 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.text.SpannableString
 import android.text.Spanned
-import android.text.TextUtils
 import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.TextView
@@ -27,6 +26,7 @@ import com.hr.ms.ms_android.utils.CodeStringUtils
 import com.hr.ms.ms_android.utils.GetImageUtils
 import com.hr.ms.ms_android.utils.ViewUtils
 import com.hr.ms.ms_android.widget.GetImageDialog
+import com.hr.ms.ms_android.widget.dialog.BottomClickListener
 import com.hr.ms.ms_android.widget.dialog.BottomMenuDialog
 import kotlinx.android.synthetic.main.seniorinfo_activity.*
 import kotlinx.android.synthetic.main.toolbar_layout.*
@@ -57,11 +57,12 @@ class SeniorAddActivity : BaseActivity(), View.OnClickListener, SeniorAddContrac
     override fun initData() {
         toolbar.addOnBackListener { onBackPressed() }
         toolbar.setStatusBarFontDark(this)
-        toolbar.setTitleContent("驿站资料")
+        toolbar.setTitleContent("完善资料")
         presenter = SeniorAddPresenter(this, ServiceRepository.getInstance(ServiceRemoteDataSource.getInstance(), ServiceLocalDataSource.getInstance()))
         userBean = intent.getParcelableExtra(CommonConstants.BEAN)
         username_et.setText(userBean?.userName)
         base_intro_et.setText(userBean?.userIntro)
+        imageurl = userBean?.userImg
         ImageLoadUtils.loadCropCircleImage(this, userBean?.userImg, image_iv, R.drawable.default_head)
         ViewUtils.setOnClickListeners(this, pre_tv, sub_tv, chooseimg_ll, type_ll, identity_ll, field_ll)
         setSpan(type_title_tv, identity_title_tv, field_title_tv, intro_title_tv)
@@ -96,17 +97,13 @@ class SeniorAddActivity : BaseActivity(), View.OnClickListener, SeniorAddContrac
                 BottomMenuDialog().showBottomDialog(
                         this,
                         arrayOf("导师", "客座嘉宾"),
-                        object : BottomMenuDialog.BootomListener {
-                            override fun onClick(which: Int) {
+                        BottomClickListener().click {
                                 type_tv.text = "导师"
                                 type = 1
-                            }
                         },
-                        object : BottomMenuDialog.BootomListener {
-                            override fun onClick(which: Int) {
+                        BottomClickListener().click {
                                 type_tv.text = "客座嘉宾"
                                 type = 2
-                            }
                         }
                 )
             }
@@ -127,11 +124,11 @@ class SeniorAddActivity : BaseActivity(), View.OnClickListener, SeniorAddContrac
                 onBackPressed()
             }
             sub_tv -> {
-                if (isUploading && TextUtils.isEmpty(imageurl)) {
+                if (isUploading) {
                     showToast("图片上传中...")
                     return
                 }
-                presenter?.setSenior(userBean?.userId, type, identity, field, intro_et.text.toString(), base_intro_et.text.toString())
+                presenter?.setSenior(userBean?.userId, type, identity, field, intro_et.text.toString(), base_intro_et.text.toString(),imageurl,username_et.text.toString())
             }
         }
     }
@@ -140,11 +137,7 @@ class SeniorAddActivity : BaseActivity(), View.OnClickListener, SeniorAddContrac
         dialogHelper?.showChooseDialog("导师身份开通成功！\n是否立即开通私塾？","查看详情","开通私塾",{
 
         }, {
-            dialogHelper?.showCreateCard({ onBackPressed() }, {
-//                var intent = Intent(this, CollegeRoomAddActivity::class.java)
-//                intent.putExtra(CommonConstants.BEAN, adapter.data[selectPos])
-//                startActivity(intent)
-            })
+
         })
     }
 

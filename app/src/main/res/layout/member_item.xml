@@ -25,30 +25,33 @@
             android:layout_marginRight="@dimen/sx_dp10"
             android:src="@drawable/default_head" />
 
-        <TextView
-            android:id="@+id/name_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:lines="1"
-            android:textColor="@color/title_text"
-            android:textSize="@dimen/sx_sp14"
-            tools:text="邓地" />
-
-        <TextView
-            android:id="@+id/scholar_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/sx_dp2"
-            android:layout_marginLeft="@dimen/sx_dp10"
-            android:textColor="@color/color_f19149"
-            android:background="@drawable/shape_rect_f19149"
-            android:textSize="@dimen/sx_sp10"
-            android:text="学霸" />
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/sx_sp14"
+                tools:text="邓地ssssssssssssssssssssssssssssss" />
+
+            <TextView
+                android:id="@+id/scholar_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sx_dp10"
+                android:background="@drawable/shape_rect_f19149"
+                android:padding="@dimen/sx_dp2"
+                android:text="学霸"
+                android:textColor="@color/color_f19149"
+                android:textSize="@dimen/sx_sp10" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/date_tv"

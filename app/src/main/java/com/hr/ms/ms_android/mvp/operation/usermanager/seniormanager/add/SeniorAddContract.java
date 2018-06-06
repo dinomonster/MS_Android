@@ -24,7 +24,7 @@ public interface SeniorAddContract {
 
     interface Presenter extends MvpPresenter {
 
-        void setSenior(Integer accId, Integer seniorType, Integer seniorIdentity, Integer seniorField, String seniorTitle, String seniorIntro);
+        void setSenior(Integer accId, Integer seniorType, Integer seniorIdentity, Integer seniorField, String seniorTitle, String seniorIntro,String seniorImg,String seniorName);
 
         void checkExternalStoragePermission(Activity activity);
 

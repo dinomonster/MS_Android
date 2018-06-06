@@ -4,7 +4,7 @@ import android.content.Context
 import com.adorkable.iosdialog.ActionSheetDialog
 
 class BottomMenuDialog {
-    fun showBottomDialog(context: Context, text: Array<String>, vararg listener: BootomListener) {
+    fun showBottomDialog(context: Context, text: Array<String>, vararg listener: BottomClickListener) {
         var dialog = ActionSheetDialog(context)
                 .builder()
                 .setCancelable(true)
@@ -14,5 +14,4 @@ class BottomMenuDialog {
         }
         dialog.show()
     }
-    interface BootomListener : ActionSheetDialog.OnSheetItemClickListener
 }

@@ -12,8 +12,8 @@ import com.hr.ms.ms_android.R
 import com.hr.ms.ms_android.base.BaseAppCompatFragment
 import com.hr.ms.ms_android.bean.MainIconBean
 import com.hr.ms.ms_android.data.AccountHelper
+import com.hr.ms.ms_android.mvp.resources.officialeventmanager.OfficialEventManagerActivity
 import com.hr.ms.ms_android.mvp.resources.overview.OverviewActivity
-import com.hr.ms.ms_android.mvp.resources.schedulemanager.ScheduleManagerActivity
 import com.hr.ms.ms_android.mvp.resources.teachersmanager.TeachersManagerActivity
 import kotlinx.android.synthetic.main.resources_fragment.*
 import java.util.*
@@ -36,13 +36,13 @@ class ResourcesFragment : BaseAppCompatFragment() {
         val data = ArrayList<MainIconBean>()
         if(AccountHelper.getMenuAuth().isOverViewEnable)data.add(MainIconBean(0,R.mipmap.ic_launcher,"概览"))
         if(AccountHelper.getMenuAuth().isTeacherManagerEnable)data.add(MainIconBean(1,R.mipmap.ic_launcher,"师资管理"))
-        if(AccountHelper.getMenuAuth().isScheduleManagerEnable)data.add(MainIconBean(2,R.mipmap.ic_launcher,"排课管理"))
+        if(AccountHelper.getMenuAuth().isScheduleManagerEnable)data.add(MainIconBean(2,R.mipmap.ic_launcher,"官方活动管理"))
         adapter.showSinglePage(data)
         adapter.onItemClickListener = BaseQuickAdapter.OnItemClickListener { _, _, position ->
             when(position){
                 0->nextActivity(OverviewActivity::class.java)
                 1->nextActivity(TeachersManagerActivity::class.java)
-                2->nextActivity(ScheduleManagerActivity::class.java)
+                2->nextActivity(OfficialEventManagerActivity::class.java)
             }
         }
 //        recyclerView.addItemDecoration(GridItemDecoration(context))

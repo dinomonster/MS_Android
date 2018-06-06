@@ -24,16 +24,22 @@ import java.net.URISyntaxException;
 
 public class AliOSSUtils implements OSSCompletedCallback<PutObjectRequest, PutObjectResult>, OSSProgressCallback<PutObjectRequest> {
 
+    private static String BASE_URL;
     private static final String END_POINT = "http://oss-cn-shenzhen.aliyuncs.com";
     private String mBucketName = "sxzx-image";
     private OSSClient mOSSClient = null;
 
+    public String getBaseUrl() {
+        return BASE_URL;
+    }
 
     public AliOSSUtils(Context context) {
         AliOSSBean bean = AccountHelper.getAliOSS();
         if (bean == null){
             return;
         }
+        BASE_URL = "http://"+mBucketName+"."+bean.getEndPoint().replace("http://","")+"/";
+
         OSSCredentialProvider credentialProvider = new OSSStsTokenCredentialProvider(bean.getAccessKeyId(), bean.getAccessKeySecret(), bean.getSecurityToken());
         ClientConfiguration conf = new ClientConfiguration();
         //连接超时，默认15秒
@@ -44,7 +50,7 @@ public class AliOSSUtils implements OSSCompletedCallback<PutObjectRequest, PutOb
         conf.setMaxConcurrentRequest(5);
         //失败后最大重试次数，默认2次
         conf.setMaxErrorRetry(2);
-        mOSSClient = new OSSClient(context, END_POINT, credentialProvider, conf);
+        mOSSClient = new OSSClient(context, bean.getEndPoint(), credentialProvider, conf);
     }
 
     public void upLoadImageViewCallBack(String objectKey, String uploadFilePath,OSSCompletedCallback<PutObjectRequest, PutObjectResult> completedCallback) {

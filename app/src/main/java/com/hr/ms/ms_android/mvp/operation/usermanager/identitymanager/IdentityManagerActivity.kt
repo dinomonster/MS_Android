@@ -42,35 +42,35 @@ class IdentityManagerActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshList
         recyclerView.adapter = adapter
         adapter.setOnItemClickListener { adapter, view, position ->
             var bean = adapter.data[position] as IdentityBeanList.Lists
-            BottomMenuDialog().showBottomDialog(
-                    context!!,
-                    arrayOf(if (bean.isAgent == CodeStringUtils.isOrNoCode[0]) "开通代言人" else "取消代言人",
-                            if (bean.isScholar == CodeStringUtils.isOrNoCode[0]) "开通学霸" else "取消学霸"),
-                    object : BottomMenuDialog.BootomListener {
-                        override fun onClick(which: Int) {
-                            if (bean.isAgent == CodeStringUtils.isOrNoCode[0]) {
-                                var intent = Intent()
-                                intent.putExtra(CommonConstants.BEAN, bean)
-                                intent.setClass(context, SetAgentActivity::class.java)
-                                startActivity(intent)
-                            } else {
-                                presenter.cancelAgentOrScholar(bean?.accId, CodeStringUtils.roleTypeCode[0])
-                            }
-                        }
-                    },
-                    object : BottomMenuDialog.BootomListener {
-                        override fun onClick(which: Int) {
-                            if (bean.isScholar == CodeStringUtils.isOrNoCode[0]) {
-                                var intent = Intent()
-                                intent.putExtra(CommonConstants.BEAN, bean)
-                                intent.setClass(context, SetScholarActivity::class.java)
-                                startActivity(intent)
-                            } else {
-                                presenter.cancelAgentOrScholar(bean?.accId, CodeStringUtils.roleTypeCode[1])
-                            }
-                        }
-                    }
-            )
+//            BottomMenuDialog().showBottomDialog(
+//                    context!!,
+//                    arrayOf(if (bean.isAgent == CodeStringUtils.isOrNoCode[0]) "开通代言人" else "取消代言人",
+//                            if (bean.isScholar == CodeStringUtils.isOrNoCode[0]) "开通学霸" else "取消学霸"),
+//                    object : BottomMenuDialog.BootomListener {
+//                        override fun onClick(which: Int) {
+//                            if (bean.isAgent == CodeStringUtils.isOrNoCode[0]) {
+//                                var intent = Intent()
+//                                intent.putExtra(CommonConstants.BEAN, bean)
+//                                intent.setClass(context, SetAgentActivity::class.java)
+//                                startActivity(intent)
+//                            } else {
+//                                presenter.cancelAgentOrScholar(bean?.accId, CodeStringUtils.roleTypeCode[0])
+//                            }
+//                        }
+//                    },
+//                    object : BottomMenuDialog.BootomListener {
+//                        override fun onClick(which: Int) {
+//                            if (bean.isScholar == CodeStringUtils.isOrNoCode[0]) {
+//                                var intent = Intent()
+//                                intent.putExtra(CommonConstants.BEAN, bean)
+//                                intent.setClass(context, SetScholarActivity::class.java)
+//                                startActivity(intent)
+//                            } else {
+//                                presenter.cancelAgentOrScholar(bean?.accId, CodeStringUtils.roleTypeCode[1])
+//                            }
+//                        }
+//                    }
+//            )
         }
         adapter.setOnLoadMoreListener({
             pageNo++
